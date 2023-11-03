@@ -4,9 +4,9 @@ import React from "react";
 
 const Card = () => {
   return (
-    <Box>
+    <Box color={"inherit"}>
     <Typography>Click to change mode</Typography>
-    <Button  variant='contained' >{"ASdfa"}</Button>
+    <Button variant='contained' >{"ASdfa"}</Button>
   </Box>
   )
 }

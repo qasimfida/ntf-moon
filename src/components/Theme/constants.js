@@ -8,6 +8,9 @@ const inter = Inter({
 
 // Define your custom colors here
 const lightPalette = {
+  inherit: {
+    main: '#000'
+  },
   primary: {
     main: '#7A52F4',
     dark: '#6242c3',
@@ -40,10 +43,16 @@ const lightPalette = {
     400: '#D9D9D9',
     600: '#b0b2b1',
     800: '#5D5D5B'
-  }
+  },
+  boxShadow: {
+    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
+  },
 };
 
 const darkPalette = {
+  inherit: {
+    main: '#fff'
+  },
   primary: {
     main: '#7A52F4',
     dark: '#6242c3',
@@ -67,12 +76,15 @@ const darkPalette = {
     paper: "#121212",
   },
   common: {
-    white: "#ffffff",
+    white: "#000",
   },
   black: {
     main: "#000000",
     dark: "#262626",
     light: "#5d5d5b",
+  },
+  boxShadow: {
+    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
   },
 };
 
@@ -104,8 +116,9 @@ export const theme = (mode) => createTheme({
     },
 
     boxShadow: {
-      appBar: "0px 3px 4px 0px rgba(153, 155, 168, 0.25)",
+      appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
     },
+    
     typography: {
       main: "#5D5D5B",
     },

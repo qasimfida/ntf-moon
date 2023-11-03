@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { serahcItems } from "@/constants";
 import styled from "@emotion/styled";
 import { Box, Typography } from "@mui/material";
@@ -6,7 +6,23 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useOnClickOutside } from "usehooks-ts";
-import { CollectionBox, CollectionCountBox, CollectionCountTypography, CollectionMainBox, CollectionNameTypography, Input, LengthTextBox, ResultsMainBox, SearchIcon, SearchMainBox, SearchTypeTypography, SearchWrapper, SeeAllMainBox, SeeAllTypography, TotalLengthBox } from "./styles";
+import {
+  CollectionBox,
+  CollectionCountBox,
+  CollectionCountTypography,
+  CollectionMainBox,
+  CollectionNameTypography,
+  Input,
+  LengthTextBox,
+  ResultsMainBox,
+  SearchIcon,
+  SearchMainBox,
+  SearchTypeTypography,
+  SearchWrapper,
+  SeeAllMainBox,
+  SeeAllTypography,
+  TotalLengthBox,
+} from "./styles";
 
 export const SearchBar = () => {
   const themeMode = useSelector((state) => state.theme.themeMode);
@@ -32,28 +48,22 @@ export const SearchBar = () => {
       <SearchMainBox>
         <SearchIcon />
         <Input
+          placeholder="Search items, collections, and accounts"
           className="searchInput"
-          placeholder="Search..."
           value={value}
           onChange={(e) => {
             setValue(e.target.value);
           }}
         />
         {value && open && (
-          <TotalLengthBox
-            onClick={() => setValue("")}
-          >
+          <TotalLengthBox onClick={() => setValue("")}>
             Clear
-            <LengthTextBox
-            >
-              5
-            </LengthTextBox>
+            <LengthTextBox>5</LengthTextBox>
           </TotalLengthBox>
         )}
       </SearchMainBox>
       {value && open && (
-        <ResultsMainBox
-        >
+        <ResultsMainBox>
           {serahcItems.map((item) => {
             return (
               <>
@@ -142,15 +152,11 @@ export const SearchBar = () => {
           })}
           <Box>
             <SeeAllMainBox>
-              <SeeAllTypography
-              >
-                See all results
-              </SeeAllTypography>
+              <SeeAllTypography>See all results</SeeAllTypography>
             </SeeAllMainBox>
           </Box>
         </ResultsMainBox>
       )}
     </SearchWrapper>
   );
-}
-
+};
