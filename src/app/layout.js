@@ -5,6 +5,7 @@ import Theme from "@/components/Theme";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
 import { Inter } from "next/font/google";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
           <body className={inter.className}>
             <Navbar />
             {children}
+            <Footer />
           </body>
         </Theme>
       </Provider>

@@ -64,11 +64,11 @@ export const SearchBar = () => {
       </SearchMainBox>
       {value && open && (
         <ResultsMainBox>
-          {serahcItems.map((item) => {
+          {serahcItems.map((item, index) => {
             return (
               <>
                 {item.type == "collections" && (
-                  <Box>
+                  <Box key={index}>
                     {" "}
                     <SearchTypeTypography>Collections</SearchTypeTypography>
                     {item.collections
