@@ -28,6 +28,8 @@ const lightPalette = {
   text: {
     primary: "#000000",
     secondary: "#000000",
+    red: "#f71111",
+    green: "#03DB80",
   },
   background: {
     default: "#f2f2f2",
@@ -77,6 +79,8 @@ const darkPalette = {
   text: {
     primary: "#ffffff",
     secondary: "#ffffff",
+    red: "#f71111",
+    green: "#03DB80",
   },
   background: {
     default: "#121212",
@@ -132,6 +136,7 @@ export const theme = (mode) =>
       },
       borderColor: {
         main: "#5D5D5B",
+        primary: "#cfdbd599",
       },
     },
     typography: {
@@ -198,6 +203,22 @@ export const theme = (mode) =>
           md: 960,
           lg: 1280,
           xl: 1920,
+        },
+      },
+      MuiTypography: {
+        defaultProps: {
+          variantMapping: {
+            h1: "h2",
+            h2: "h2",
+            h3: "h2",
+            h4: "h2",
+            h5: "h2",
+            h6: "h2",
+            subtitle1: "h2",
+            subtitle2: "h2",
+            body1: "span",
+            body2: "span",
+          },
         },
       },
       components: {
