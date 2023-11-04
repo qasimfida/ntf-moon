@@ -56,6 +56,11 @@ export const serahcItems = [
 
 export const profileSettingsNavOptions = [
   {
+    label: "Profile",
+    path: "/profile/profile-settings",
+    icon: <AccountCircle />,
+  },
+  {
     label: "Account Details",
     path: "/profile/account-details",
     icon: <AccountCircle />,
@@ -166,4 +171,10 @@ export const UpcommingMintList = [
       "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
     date: "13 Oct 2024",
   },
+];
+
+export const pagesWithOnlyCopyrightSection = [
+  "/profile/notification-settings",
+  "/profile/account-details",
+  "/profile/profile-settings",
 ];

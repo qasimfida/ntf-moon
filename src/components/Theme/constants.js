@@ -24,6 +24,11 @@ const lightPalette = {
     light: "#CCCCCC",
     main: "#7F7F7F",
     dark: "#4D4D4D",
+    400: "#f5f7f7",
+    600: "#b0b2b1",
+    800: "#5D5D5B",
+    900: "#979797",
+    1000: "#EBF0F080",
   },
   text: {
     primary: "#000000",
@@ -40,13 +45,6 @@ const lightPalette = {
   },
   black: {
     main: "#000000",
-  },
-  grey: {
-    400: "#f5f7f7",
-    600: "#b0b2b1",
-    800: "#5D5D5B",
-    900: "#979797",
-    1000: "#EBF0F080",
   },
   boxShadow: {
     appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
@@ -89,12 +87,6 @@ const darkPalette = {
   common: {
     white: "#000",
   },
-  grey: {
-    400: "#171818",
-    600: "#b0b2b1",
-    800: "#5D5D5B",
-    900: "#8e9392",
-  },
   boxShadow: {
     appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
   },
@@ -117,9 +109,6 @@ export const theme = (mode) =>
         black: mode === "light" ? "#000" : "#fff",
         white: mode === "light" ? "#fff" : "#000",
       },
-      typography: {
-        color: mode === "light" ? "#000" : "#fff",
-      },
       tokenHoverColor: {
         color: "#D9D9D9",
       },
@@ -130,10 +119,6 @@ export const theme = (mode) =>
 
       boxShadow: {
         appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
-      },
-
-      typography: {
-        main: "#5D5D5B",
       },
       borderColor: {
         main: "#5D5D5B",
@@ -155,7 +140,8 @@ export const theme = (mode) =>
         fontSize: "16px",
         color: mode === "light" ? "#000" : "#fff",
       },
-      color: "#000",
+      color: mode === "light" ? "#000" : "#fff",
+      main: "#5D5D5B",
     },
     breakpoints: { values: breakpoints },
     components: {

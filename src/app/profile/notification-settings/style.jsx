@@ -13,7 +13,7 @@ export const SettingsMainBox = styled(Box)(
     display: "flex",
     flexDirection: "column",
     backgroundColor: palette.grey[1000],
-    margin: "16px 0px",
+    margin: "16px 0px 30px 0px",
     padding: "24px",
     borderRadius: "16px",
   })

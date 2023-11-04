@@ -4,7 +4,7 @@ import { Input } from "../Input";
 
 export const Wrapper = styled(Box)(({ theme }) => ({
   paddingTop: theme.spacing(8.3),
-  backgroundColor: theme.palette.grey[400],
+  backgroundColor: theme.palette.common.white,
   ".mt_16": {
     marginTop: theme.spacing(2),
   },
@@ -16,7 +16,10 @@ export const Heading = styled(Typography)(({ theme }) => ({
   fontWeight: 700,
 }));
 export const StyledInput = styled(Input)(({ theme }) => ({
-  marginTop: theme.spacing(3),
+  marginTop: theme.spacing(1.3),
+  height: "40px",
+  minWidth: "300px",
+  marginBottom: theme.spacing(4),
 }));
 export const IconsWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -27,10 +30,10 @@ export const IconWrapper = styled("a")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: "8px",
+  borderRadius: "14px",
   cursor: "pointer",
   backgroundColor: theme.palette.common.black,
-  padding: theme.spacing(1.3),
+  padding: theme.spacing(1),
   svg: {
     color:
       theme.palette.mode === "dark"
@@ -63,13 +66,17 @@ export const CopyRight = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: theme.spacing(4.3, 4),
+  minHeight: "70px",
+  gap: theme.spacing(2),
+  padding: theme.spacing(3, 4),
   marginTop: theme.spacing(9),
   borderTop: `1px solid ${theme.palette.grey[900]}`,
+  flexWrap: "wrap",
 }));
 export const MainText = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: theme.spacing(2.8),
+  flexWrap: "wrap",
 }));
 export const StyledTypo = styled(Typography)(({ theme }) => ({
   fontWeight: 700,

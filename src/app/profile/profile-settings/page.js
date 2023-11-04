@@ -19,11 +19,12 @@ import {
 import FieldBoxWithLabel from "@/components/ProfilePage/FieldBoxWithLabel";
 import TextAreaWithLabel from "@/components/TextAreaWithLabel";
 import CheckboxWithLabel from "@/components/ProfilePage/CheckboxWithLabel";
+import RoadMapInputBox from "@/components/ProfilePage/RoadMapInputBox";
 
-export default function AccountDetails() {
+export default function ProfileSettings() {
   return (
     <>
-      <SettingsMainHeading>Account Details</SettingsMainHeading>
+      <SettingsMainHeading>Profile Settings</SettingsMainHeading>
       <ProfilePicSection>
         <ProfilePicMainBox>
           <ProfilePicBox>
@@ -71,16 +72,33 @@ export default function AccountDetails() {
         <TextAreaWithLabel label={"Bio Description"} />
       </SettingsMainBox>
 
-      <SubHeading>Account Information</SubHeading>
+      <SubHeading>Road Map</SubHeading>
 
       <SettingsMainBox>
-        <FieldBoxWithLabel
-          label={"Email address"}
-          text={"seb.bennett@gmail.com"}
+        <RoadMapInputBox
+          textAreaPlaceholder={"Text block (max. 50 Words)"}
+          inputPlaceholder={"Header (max. 2 Words)"}
+          label={"Bulletpoint 01"}
         />
-        <CheckboxWithLabel
-          text={"Disable E-Mail Notifications"}
-          border={false}
+        <RoadMapInputBox
+          textAreaPlaceholder={"Text block (max. 50 Words)"}
+          inputPlaceholder={"Header (max. 2 Words)"}
+          label={"Bulletpoint 02"}
+        />
+        <RoadMapInputBox
+          textAreaPlaceholder={"Text block (max. 50 Words)"}
+          inputPlaceholder={"Header (max. 2 Words)"}
+          label={"Bulletpoint 03"}
+        />
+        <RoadMapInputBox
+          textAreaPlaceholder={"Text block (max. 50 Words)"}
+          inputPlaceholder={"Header (max. 2 Words)"}
+          label={"Bulletpoint 04"}
+        />
+        <RoadMapInputBox
+          textAreaPlaceholder={"Text block (max. 50 Words)"}
+          inputPlaceholder={"Header (max. 2 Words)"}
+          label={"Bulletpoint 05"}
         />
       </SettingsMainBox>
 
