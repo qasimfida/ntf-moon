@@ -20,9 +20,16 @@ const lightPalette = {
     main: "#f4c952",
     light: "#fff5d9",
   },
+  grey: {
+    light: "#CCCCCC",
+    main: "#7F7F7F",
+    dark: "#4D4D4D",
+  },
   text: {
     primary: "#000000",
     secondary: "#000000",
+    red: "#f71111",
+    green: "#03DB80",
   },
   background: {
     default: "#f2f2f2",
@@ -38,7 +45,8 @@ const lightPalette = {
     400: "#f5f7f7",
     600: "#b0b2b1",
     800: "#5D5D5B",
-    900: "#8e9392",
+    900: "#979797",
+    1000: "#EBF0F080",
   },
   boxShadow: {
     appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
@@ -58,9 +66,21 @@ const darkPalette = {
     main: "#f4c952",
     light: "#fff5d9",
   },
+  grey: {
+    light: "#CCCCCC",
+    main: "#7F7F7F",
+    dark: "#4D4D4D",
+    400: "#D9D9D9",
+    600: "#b0b2b1",
+    800: "#FFFFFF80",
+    900: "#FFFFFF80",
+    1000: "#EBF0F01A",
+  },
   text: {
     primary: "#ffffff",
     secondary: "#ffffff",
+    red: "#f71111",
+    green: "#03DB80",
   },
   background: {
     default: "#121212",
@@ -117,6 +137,7 @@ export const theme = (mode) =>
       },
       borderColor: {
         main: "#5D5D5B",
+        primary: "#cfdbd599",
       },
     },
     typography: {
@@ -191,6 +212,22 @@ export const theme = (mode) =>
           md: 960,
           lg: 1280,
           xl: 1920,
+        },
+      },
+      MuiTypography: {
+        defaultProps: {
+          variantMapping: {
+            h1: "h2",
+            h2: "h2",
+            h3: "h2",
+            h4: "h2",
+            h5: "h2",
+            h6: "h2",
+            subtitle1: "h2",
+            subtitle2: "h2",
+            body1: "span",
+            body2: "span",
+          },
         },
       },
       components: {

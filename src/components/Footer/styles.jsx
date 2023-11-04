@@ -1,3 +1,4 @@
+"use client";
 import { Box, Typography, styled } from "@mui/material";
 import { Input } from "../Input";
 
