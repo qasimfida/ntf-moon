@@ -18,7 +18,16 @@ const Footer = () => {
     <StyledFooter>
       <Container>
         <Grid container spacing={2}>
-          <StyledColumn item xs={12} sm={6} md={3}>
+          <StyledColumn
+            item
+            xs={12}
+            sm={6}
+            md={3}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
             <Typography
               variant="body2"
               color={themeMode === "light" ? "#000" : "#fff"}

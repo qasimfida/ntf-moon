@@ -20,9 +20,7 @@ export default function LaunchpadIndex() {
       > */}
         <Launchpad />
       </MainBox>
-      <Box mt={5}>
-        <Footer />
-      </Box>
+      <Box mt={5}>{/* <Footer /> */}</Box>
       {/* </Box> */}
     </MainSetion>
   );
