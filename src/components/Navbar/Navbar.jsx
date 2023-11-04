@@ -65,6 +65,7 @@ export const Navbar = () => {
         >
           <Image
             src="/images/logo.svg"
+            alt="Logo"
             width={50}
             height={50}
             style={{
@@ -95,7 +96,7 @@ export const Navbar = () => {
             onClick={handleOpenNavMenu}
             color="inherit"
           >
-            <MenuIcon color="inherit"/>
+            <MenuIcon color="inherit" />
           </IconButton>
           <StyledMenu
             id="menu-appbar"
@@ -112,8 +113,8 @@ export const Navbar = () => {
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
           >
-            {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
+            {pages.map((page, index) => (
+              <MenuItem key={index} onClick={handleCloseNavMenu}>
                 <StyledMenuItemTypography component="a">
                   {page.name}
                 </StyledMenuItemTypography>
@@ -133,6 +134,7 @@ export const Navbar = () => {
           >
             <Image
               src="/images/logo.svg"
+              alt="Logo"
               width={50}
               height={50}
               style={{
@@ -154,10 +156,10 @@ export const Navbar = () => {
           <LinksMainBox
             sx={{ display: { xs: "none", md: "flex", gap: "20px" } }}
           >
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <StyledLink
                 href={page.path}
-                key={page.name}
+                key={index}
                 onClick={handleCloseNavMenu}
                 className={pathName === page.path ? "active" : ""}
               >

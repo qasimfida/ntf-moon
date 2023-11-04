@@ -1,205 +1,83 @@
-"use client";
-import useGetActiveTheme from "@/hooks/useGetActiveTheme";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React from "react";
 import {
-  FollowCard,
-  Input,
-  StyledColumn,
-  StyledFooter,
-  StyledLink,
+  CopyRight,
+  StyledTypo,
+  Heading,
+  IconWrapper,
+  IconsWrapper,
+  LanguageWrapper,
+  PowerDescription,
+  StyledInput,
+  SubHeading,
+  Wrapper,
+  YearTypography,
+  MainText,
+  Circle,
 } from "./styles";
-import Image from "next/image";
+import DiscordIcon from "../Svgs";
+import { Language, Twitter } from "@mui/icons-material";
 
-const Footer = () => {
-  const themeMode = useGetActiveTheme();
-  const [value, setValue] = React.useState("");
+export const Footer = () => {
   return (
-    <StyledFooter>
+    <Wrapper>
       <Container>
-        <Grid container spacing={2}>
-          <StyledColumn
-            item
-            xs={12}
-            sm={6}
-            md={3}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Typography
-              variant="body2"
-              color={themeMode === "light" ? "#000" : "#fff"}
-            >
-              Subscribe for Updates
-            </Typography>
-            <Input
-              placeholder="Entyer your e-mail"
-              className="searchInput"
-              value={value}
-              onChange={(e) => {
-                setValue(e.target.value);
-              }}
-            />
-          </StyledColumn>
-          <StyledColumn item xs={12} sm={6} md={3}>
-            <Typography
-              variant="body2"
-              color={themeMode === "light" ? "#000" : "#fff"}
-            >
-              MarketPlace
-            </Typography>
-            <StyledLink href="#">Explore</StyledLink>
-            <StyledLink href="#">Become a Partner</StyledLink>
-            <StyledLink href="#">About Us</StyledLink>
-          </StyledColumn>
-          <StyledColumn item xs={12} sm={6} md={3}>
-            <Typography
-              variant="body2"
-              color={themeMode === "light" ? "#000" : "#fff"}
-            >
-              Community
-            </Typography>
-            <StyledLink href="#">Profile</StyledLink>
-            <StyledLink href="#">My Collection</StyledLink>
-          </StyledColumn>
-          <StyledColumn item xs={12} sm={6} md={3}>
-            <Typography
-              variant="body2"
-              color={themeMode === "light" ? "#000" : "#fff"}
-            >
-              Powered by Moon Studios
-            </Typography>
-            <Typography
-              variant="body2"
-              color={themeMode === "light" ? "#000" : "#fff"}
-            >
-              Bridging the gap between the real world and web 3.0
-            </Typography>
-          </StyledColumn>
-        </Grid>
-        <Grid
-          container
-          spacing={2}
-          color={themeMode === "light" ? "#000" : "#fff"}
-        >
-          <StyledColumn item xs={12} sm={6} md={3}>
-            <Typography
-              variant="body1"
-              fontWeight={"bold"}
-              color={themeMode === "light" ? "#000" : "#fff"}
-            >
-              Follow us
-            </Typography>
-            <Box display={"flex"} flexDirection={"row"}>
-              <FollowCard>
-                {themeMode === "light" ? (
-                  <Image
-                    src={"/images/whiteDiscordIcon.png"}
-                    width={40}
-                    height={40}
-                  />
-                ) : (
-                  <Image
-                    src={"/images/blackDiscordIcon.png"}
-                    width={40}
-                    height={40}
-                  />
-                )}
-              </FollowCard>
-              <FollowCard>
-                {themeMode === "light" ? (
-                  <Image
-                    src={"/images/whiteTwitterIcon.png"}
-                    width={40}
-                    height={40}
-                  />
-                ) : (
-                  <Image
-                    src={"/images/blackTwitterIcon.png"}
-                    width={40}
-                    height={40}
-                  />
-                )}
-              </FollowCard>
-              <FollowCard>
-                {themeMode === "light" ? (
-                  <Image
-                    src={"/images/whiteInternetIcon.png"}
-                    width={40}
-                    height={40}
-                  />
-                ) : (
-                  <Image
-                    src={"/images/blackInternetIcon.png"}
-                    width={40}
-                    height={40}
-                  />
-                )}
-              </FollowCard>
-            </Box>
-          </StyledColumn>
+        <Grid container gap={4} justifyContent={"space-between"}>
+          <Grid item md={4}>
+            <Heading variant="h2">Subscribe for updates</Heading>
+            <StyledInput placeholder={"Enter Your E-mail"} />
+            <Heading variant="h2" className="mt_40">
+              Follow Us
+            </Heading>
+            <IconsWrapper>
+              <IconWrapper href="#">
+                <DiscordIcon />
+              </IconWrapper>
+              <IconWrapper href="#">
+                <Twitter />
+              </IconWrapper>
+              <IconWrapper href="#">
+                <Language />
+              </IconWrapper>
+            </IconsWrapper>
+          </Grid>
+          <Grid item md={1.646}>
+            <Heading variant="h2">Marketplace</Heading>
+            <SubHeading href="#" className="mt_16">
+              Explore
+            </SubHeading>
+            <SubHeading href="#">Become a Partner</SubHeading>
+            <SubHeading href="#">About Us</SubHeading>
+          </Grid>
+          <Grid item md={1.646}>
+            <Heading variant="h2">Community</Heading>
+            <SubHeading href="#" className="mt_16">
+              Profile
+            </SubHeading>
+            <SubHeading href="#">My Collections</SubHeading>
+          </Grid>
+          <Grid item md={3}>
+            <Heading variant="h2">Powered by Moon Studios</Heading>
+            <PowerDescription className="mt_16">
+              Bridging the gap between the Real World and Web 3.0
+            </PowerDescription>
+          </Grid>
         </Grid>
       </Container>
-      <Box
-        borderTop={1}
-        borderColor="grey.500"
-        minHeight={85}
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        paddingX={2}
-        width="100%"
-        mt={14}
-      >
-        <Box display="flex" alignItems="center">
-          <Typography
-            variant="body2"
-            fontWeight={"bold"}
-            color={themeMode === "light" ? "#000" : "#fff"}
-          >
-            Privacy Policy
-          </Typography>
-          <Typography
-            variant="body2"
-            fontWeight={"bold"}
-            color={themeMode === "light" ? "#000" : "#fff"}
-            marginLeft={2}
-          >
-            License
-          </Typography>
-          <Typography
-            variant="body2"
-            fontWeight={"bold"}
-            color={themeMode === "light" ? "#000" : "#fff"}
-            marginLeft={2}
-          >
-            API
-          </Typography>
-          <Typography variant="body2" color={"gray"} marginLeft={2}>
-            @ 2021 All rights reserved
-          </Typography>
-        </Box>
-        <Box display={"flex"} alignItems={"center"}>
-          <Typography
-            variant="body2"
-            fontWeight={"bold"}
-            color={themeMode === "light" ? "#000" : "#fff"}
-          >
-            English
-          </Typography>
-          <Box
-            height={40}
-            width={40}
-            border={`1px solid ${themeMode == "light" ? "#000" : "#fff"}`}
-            borderRadius={100}
-            ml={1}
-          />
-        </Box>
-      </Box>
-    </StyledFooter>
+      <CopyRight>
+        <MainText>
+          <StyledTypo>Privacy Policy</StyledTypo>
+          <StyledTypo>License</StyledTypo>
+          <StyledTypo>API</StyledTypo>
+          <YearTypography variant="subtitle1">
+            © 2021 All rights reserved
+          </YearTypography>
+        </MainText>
+        <LanguageWrapper>
+          <StyledTypo>English</StyledTypo>
+          <Circle />
+        </LanguageWrapper>
+      </CopyRight>
+    </Wrapper>
   );
 };
-
-export default Footer;

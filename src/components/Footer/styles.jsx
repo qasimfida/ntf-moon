@@ -1,55 +1,93 @@
-import styled from "@emotion/styled";
-import { Grid, TextField } from "@mui/material";
-import Link from "next/link";
+"use client";
+import { Box, Typography, styled } from "@mui/material";
+import { Input } from "../Input";
 
-export const StyledFooter = styled("div")(({ theme: { palette } }) => ({
-  backgroundColor: palette.mode === "light" ? "#F5F7F7" : "#171818",
-  color: "#fff",
-  padding: "32px 0",
-  textAlign: "center",
-  height: "450px",
-}));
-
-export const StyledColumn = styled(Grid)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-}));
-
-export const StyledEmailInput = styled(TextField)(({ theme }) => ({
-  width: "100%",
-  height: "40px",
-  marginTop: "8px",
-  borderRadius: "40px",
-}));
-
-export const StyledLink = styled(Link)(({ theme: { palette } }) => ({
-  color: palette.mode == "light" ? "#000" : "#fff",
-  textDecoration: "none",
-  margin: "8px 0",
-  fontSize: "14px",
-}));
-export const Input = styled("input")(({ theme: { palette } }) => ({
-  padding: "0 42px",
-  borderRadius: "24px",
-  background: palette.mode === "light" ? "#EBF0F080" : "#EBF0F01A",
-  color: palette.mode === "light" ? "#5D5D5B" : "#fff",
-  border: `1px solid ${palette.mode == "light" ? "gray" : "#fff"}`,
-  outline: "none",
-  height: "48px",
-  width: "100%",
-  marginTop: "8px",
-  "::placeholder": {
-    color: "#5D5D5B",
+export const Wrapper = styled(Box)(({ theme }) => ({
+  paddingTop: theme.spacing(8.3),
+  backgroundColor: theme.palette.grey[400],
+  ".mt_16": {
+    marginTop: theme.spacing(2),
+  },
+  ".mt_40": {
+    marginTop: theme.spacing(5),
   },
 }));
-
-export const FollowCard = styled("div")(({ theme: { palette } }) => ({
-  backgroundColor: palette.mode === "light" ? "#000" : "#fff",
-  height: "60px",
-  width: "60px",
-  justifyContent: "center",
+export const Heading = styled(Typography)(({ theme }) => ({
+  fontWeight: 700,
+}));
+export const StyledInput = styled(Input)(({ theme }) => ({
+  marginTop: theme.spacing(3),
+}));
+export const IconsWrapper = styled(Box)(({ theme }) => ({
+  display: "flex",
+  marginTop: theme.spacing(1),
+  gap: theme.spacing(2),
+}));
+export const IconWrapper = styled("a")(({ theme }) => ({
+  display: "flex",
   alignItems: "center",
+  justifyContent: "center",
   borderRadius: "8px",
-  margin: "0 8px",
+  cursor: "pointer",
+  backgroundColor: theme.palette.common.black,
+  padding: theme.spacing(1.3),
+  svg: {
+    color:
+      theme.palette.mode === "dark"
+        ? theme.palette.common.white
+        : theme.palette.common.white,
+    width: "34px",
+    height: "34px",
+  },
+}));
+export const SubHeading = styled("a")(({ theme }) => ({
+  display: "flex",
+  alignItems: "column",
+  justifyContent: "start",
+  cursor: "pointer",
+  fontWeight: 700,
+  fontSize: "0.875rem",
+  color: theme.palette.grey[800],
+  marginBottom: theme.spacing(1.3),
+  "&:hover": {
+    textDecoration: "underline",
+  },
+}));
+export const PowerDescription = styled(Typography)(({ theme }) => ({
+  cursor: "auto",
+  fontWeight: 400,
+  fontSize: "0.875rem",
+  color: theme.palette.grey[800],
+}));
+export const CopyRight = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: theme.spacing(4.3, 4),
+  marginTop: theme.spacing(9),
+  borderTop: `1px solid ${theme.palette.grey[900]}`,
+}));
+export const MainText = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: theme.spacing(2.8),
+}));
+export const StyledTypo = styled(Typography)(({ theme }) => ({
+  fontWeight: 700,
+  fontSize: "0.75rem",
+}));
+export const LanguageWrapper = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: theme.spacing(2.8),
+}));
+export const YearTypography = styled(Typography)(({ theme }) => ({
+  fontWeight: 500,
+  fontSize: "0.75rem",
+  color: theme.palette.grey[800],
+}));
+export const Circle = styled(Typography)(({ theme }) => ({
+  width: "46px",
+  height: "46px",
+  borderRadius: "50%",
+  border: `1px solid ${theme.palette.grey[900]} `,
 }));

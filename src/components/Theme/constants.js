@@ -42,7 +42,7 @@ const lightPalette = {
     main: "#000000",
   },
   grey: {
-    400: "#D9D9D9",
+    400: "#f5f7f7",
     600: "#b0b2b1",
     800: "#5D5D5B",
     900: "#979797",
@@ -89,10 +89,11 @@ const darkPalette = {
   common: {
     white: "#000",
   },
-  black: {
-    main: "#000000",
-    dark: "#262626",
-    light: "#5d5d5b",
+  grey: {
+    400: "#171818",
+    600: "#b0b2b1",
+    800: "#5D5D5B",
+    900: "#8e9392",
   },
   boxShadow: {
     appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
@@ -142,10 +143,18 @@ export const theme = (mode) =>
     typography: {
       fontFamily: inter.style.fontFamily,
       h1: { fontSize: "42px", color: "#000" },
-      h2: { fontSize: "34px", color: "#000" },
+      h2: {
+        fontSize: "16px",
+        color: mode === "light" ? "#000" : "#fff",
+        lineHeight: "24px",
+      },
       h3: { fontSize: "28px", color: "#000" },
       h4: { fontSize: "24px", color: "#000" },
       h5: { fontSize: "20px", color: "#000" },
+      body1: {
+        fontSize: "16px",
+        color: mode === "light" ? "#000" : "#fff",
+      },
       color: "#000",
     },
     breakpoints: { values: breakpoints },
