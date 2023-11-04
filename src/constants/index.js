@@ -89,3 +89,81 @@ export const notificationSettings = [
     text: "When you purchased an item",
   },
 ];
+
+export const ActiveMintList = [
+  {
+    id: 1,
+    title: "Celestial Spirits",
+    mintPrice: "20 XRP",
+    collectionSize: "1000",
+    mintedPercentage: "70",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
+  },
+  {
+    id: 2,
+    title: "Celestial Spirits",
+    mintPrice: "20 XRP",
+    collectionSize: "1000",
+    mintedPercentage: "70",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
+  },
+  {
+    id: 3,
+    title: "Celestial Spirits",
+    mintPrice: "20 XRP",
+    collectionSize: "1000",
+    mintedPercentage: "70",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
+  },
+  {
+    id: 4,
+    title: "Celestial Spirits",
+    mintPrice: "20 XRP",
+    collectionSize: "1000",
+    mintedPercentage: "70",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
+  },
+];
+
+export const UpcommingMintList = [
+  {
+    id: 1,
+    title: "Celestial Spirits",
+    mintPrice: "20 XRP",
+    collectionSize: "1000",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
+    date: "01 June 2024",
+  },
+  {
+    id: 2,
+    title: "Celestial Spirits",
+    mintPrice: "20 XRP",
+    collectionSize: "1000",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
+    date: "26 Apr 2024",
+  },
+  {
+    id: 3,
+    title: "Celestial Spirits",
+    mintPrice: "20 XRP",
+    collectionSize: "1000",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
+    date: "18 Aug 2024",
+  },
+  {
+    id: 4,
+    title: "Celestial Spirits",
+    mintPrice: "20 XRP",
+    collectionSize: "1000",
+    image:
+      "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
+    date: "13 Oct 2024",
+  },
+];
