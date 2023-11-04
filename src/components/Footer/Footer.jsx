@@ -24,9 +24,9 @@ export const Footer = () => {
       <Container>
         <Grid container gap={4} justifyContent={"space-between"}>
           <Grid item md={4}>
-            <Heading variant="h2">Subscribe for updates</Heading>
+            <Heading variant="h3">Subscribe for updates</Heading>
             <StyledInput placeholder={"Enter Your E-mail"} />
-            <Heading variant="h2" className="mt_40">
+            <Heading variant="h3" className="mt_40">
               Follow Us
             </Heading>
             <IconsWrapper>
@@ -42,7 +42,7 @@ export const Footer = () => {
             </IconsWrapper>
           </Grid>
           <Grid item md={1.646}>
-            <Heading variant="h2">Marketplace</Heading>
+            <Heading variant="h3">Marketplace</Heading>
             <SubHeading href="#" className="mt_16">
               Explore
             </SubHeading>
@@ -50,14 +50,14 @@ export const Footer = () => {
             <SubHeading href="#">About Us</SubHeading>
           </Grid>
           <Grid item md={1.646}>
-            <Heading variant="h2">Community</Heading>
+            <Heading variant="h3">Community</Heading>
             <SubHeading href="#" className="mt_16">
               Profile
             </SubHeading>
             <SubHeading href="#">My Collections</SubHeading>
           </Grid>
           <Grid item md={3}>
-            <Heading variant="h2">Powered by Moon Studios</Heading>
+            <Heading variant="h3">Powered by Moon Studios</Heading>
             <PowerDescription className="mt_16">
               Bridging the gap between the Real World and Web 3.0
             </PowerDescription>
@@ -66,10 +66,10 @@ export const Footer = () => {
       </Container>
       <CopyRight>
         <MainText>
-          <StyledTypo>Privacy Policy</StyledTypo>
-          <StyledTypo>License</StyledTypo>
-          <StyledTypo>API</StyledTypo>
-          <YearTypography variant="subtitle1">
+          <StyledTypo variant="caption">Privacy Policy</StyledTypo>
+          <StyledTypo variant="caption">License</StyledTypo>
+          <StyledTypo variant="caption">API</StyledTypo>
+          <YearTypography variant="caption">
             © 2021 All rights reserved
           </YearTypography>
         </MainText>

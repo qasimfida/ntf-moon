@@ -85,6 +85,7 @@ export const StyledAppBar = styled(AppBar)(({ theme: { palette, mode } }) => ({
 export const StyledToolbar = styled(Toolbar)(
   ({ theme: { palette, mode, breakpoints } }) => ({
     width: "100%",
+    height: "100%",
     padding: "0px 10px",
     boxShadow: "0px 3px 4px 0px rgba(153, 155, 168, 0.25)",
     [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
