@@ -10,8 +10,8 @@ export const pages = [
     path: "/stats",
   },
   {
-    name: "Service",
-    path: "/service",
+    name: "Services",
+    path: "/services",
   },
   {
     name: "Launchpad",
