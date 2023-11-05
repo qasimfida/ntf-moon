@@ -6,6 +6,8 @@ import { Provider } from "react-redux";
 import { store } from "@/redux/store";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { usePathname } from "next/navigation";
+import { pagesWithOnlyCopyrightSection } from "@/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +17,7 @@ const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
   return (
     <html lang="en">
       <Provider store={store}>
@@ -26,7 +29,11 @@ export default function RootLayout({ children }) {
           <body className={inter.className}>
             <Navbar />
             {children}
-            <Footer />
+            <Footer
+              navigationSection={
+                pagesWithOnlyCopyrightSection.includes(pathname) ? false : true
+              }
+            />
           </body>
         </Theme>
       </Provider>

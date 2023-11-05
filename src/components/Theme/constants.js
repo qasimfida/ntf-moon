@@ -6,7 +6,6 @@ const inter = Inter({
   display: "swap",
 });
 
-// Define your custom colors here
 const lightPalette = {
   inherit: {
     main: "#000",
@@ -24,6 +23,11 @@ const lightPalette = {
     light: "#CCCCCC",
     main: "#7F7F7F",
     dark: "#4D4D4D",
+    400: "#f5f7f7",
+    600: "#b0b2b1",
+    800: "#5D5D5B",
+    900: "#979797",
+    1000: "#EBF0F080",
   },
   text: {
     primary: "#000000",
@@ -36,20 +40,19 @@ const lightPalette = {
     paper: "#ffffff",
   },
   common: {
-    white: "#ffffff",
+    white: "#000",
   },
-  black: {
-    main: "#000000",
+  boxShadow: {
+    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
   },
   grey: {
     400: "#f5f7f7",
     600: "#b0b2b1",
     800: "#5D5D5B",
-    900: "#979797",
-    1000: "#EBF0F080",
+    900: "#8e9392",
   },
-  boxShadow: {
-    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
+  dark: {
+    400: "#393D3B",
   },
 };
 
@@ -66,28 +69,11 @@ const darkPalette = {
     main: "#f4c952",
     light: "#fff5d9",
   },
-  grey: {
-    light: "#CCCCCC",
-    main: "#7F7F7F",
-    dark: "#4D4D4D",
-    400: "#D9D9D9",
-    600: "#b0b2b1",
-    800: "#FFFFFF80",
-    900: "#FFFFFF80",
-    1000: "#EBF0F01A",
-  },
-  text: {
-    primary: "#ffffff",
-    secondary: "#ffffff",
-    red: "#f71111",
-    green: "#03DB80",
-  },
-  background: {
-    default: "#121212",
-    paper: "#121212",
-  },
   common: {
-    white: "#000",
+    white: "#fff",
+  },
+  boxShadow: {
+    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
   },
   grey: {
     400: "#171818",
@@ -95,8 +81,8 @@ const darkPalette = {
     800: "#5D5D5B",
     900: "#8e9392",
   },
-  boxShadow: {
-    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
+  dark: {
+    400: "#393D3B",
   },
 };
 
@@ -117,45 +103,40 @@ export const theme = (mode) =>
         black: mode === "light" ? "#000" : "#fff",
         white: mode === "light" ? "#fff" : "#000",
       },
-      typography: {
-        color: mode === "light" ? "#000" : "#fff",
-      },
       tokenHoverColor: {
         color: "#D9D9D9",
-      },
-      background: {
-        default: "#FFFFFF",
-        paper: "#FFFFFF",
       },
 
       boxShadow: {
         appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
       },
-
-      typography: {
-        main: "#5D5D5B",
-      },
       borderColor: {
         main: "#5D5D5B",
-        primary: "#cfdbd599",
       },
     },
+    shadows: [
+      "none",
+      "0px 3px 4px 0px rgba(153, 155, 168, 0.25), 0px 3px 4px 0px rgba(153, 155, 168, 0.25), 0px 3px 4px 0px rgba(153, 155, 168, 0.25)", // 1
+      "0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)",
+    ],
     typography: {
       fontFamily: inter.style.fontFamily,
-      h1: { fontSize: "42px", color: "#000" },
-      h2: {
-        fontSize: "16px",
-        color: mode === "light" ? "#000" : "#fff",
-        lineHeight: "24px",
-      },
-      h3: { fontSize: "28px", color: "#000" },
-      h4: { fontSize: "24px", color: "#000" },
-      h5: { fontSize: "20px", color: "#000" },
+      h1: { fontSize: "42px" },
+      h2: { fontSize: "24px" },
+      h3: { fontSize: "16px", lineHeight: "24px" },
+      h4: { fontSize: "24px" },
+      h5: { fontSize: "20px" },
       body1: {
         fontSize: "16px",
-        color: mode === "light" ? "#000" : "#fff",
       },
-      color: "#000",
+      body2: {
+        fontSize: "14px",
+      },
+      caption: {
+        fontSize: "12px",
+      },
+      color: mode === "light" ? "#fff" : "#fff",
+      main: "#5D5D5B",
     },
     breakpoints: { values: breakpoints },
     components: {
@@ -182,6 +163,7 @@ export const theme = (mode) =>
       MuiButton: {
         styleOverrides: {
           root: {
+            fontFamily: inter.style.fontFamily,
             borderRadius: "24px",
             padding: "10px 14px",
             fontSize: "14px",
@@ -212,22 +194,6 @@ export const theme = (mode) =>
           md: 960,
           lg: 1280,
           xl: 1920,
-        },
-      },
-      MuiTypography: {
-        defaultProps: {
-          variantMapping: {
-            h1: "h2",
-            h2: "h2",
-            h3: "h2",
-            h4: "h2",
-            h5: "h2",
-            h6: "h2",
-            subtitle1: "h2",
-            subtitle2: "h2",
-            body1: "span",
-            body2: "span",
-          },
         },
       },
       components: {

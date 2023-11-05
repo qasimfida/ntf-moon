@@ -3,13 +3,22 @@ import {
   CoverPicBox,
   CoverPicMainBox,
   GreyText,
+  PrimaryButton,
   ProfileHeadingBox,
   ProfilePicBox,
   ProfilePicMainBox,
   ProfilePicSection,
+  SecondaryButton,
   SettingsMainHeading,
   SubHeading,
 } from "../style";
+import {
+  ButtonsMainBox,
+  SettingsMainBox,
+} from "../notification-settings/style";
+import FieldBoxWithLabel from "@/components/ProfilePage/FieldBoxWithLabel";
+import TextAreaWithLabel from "@/components/TextAreaWithLabel";
+import CheckboxWithLabel from "@/components/ProfilePage/CheckboxWithLabel";
 
 export default function AccountDetails() {
   return (
@@ -46,6 +55,39 @@ export default function AccountDetails() {
           </ProfileHeadingBox>
         </CoverPicMainBox>
       </ProfilePicSection>
+
+      <SubHeading>Account Information</SubHeading>
+
+      <SettingsMainBox>
+        <FieldBoxWithLabel label={"Display Name"} text={"TheRealIslander"} />
+        <FieldBoxWithLabel
+          label={"Discord Username"}
+          text={"TheRealIslander#1232"}
+        />
+        <FieldBoxWithLabel
+          label={"Twitter / X Username"}
+          text={"@TheRealIslander"}
+        />
+        <TextAreaWithLabel label={"Bio Description"} />
+      </SettingsMainBox>
+
+      <SubHeading>Account Information</SubHeading>
+
+      <SettingsMainBox>
+        <FieldBoxWithLabel
+          label={"Email address"}
+          text={"seb.bennett@gmail.com"}
+        />
+        <CheckboxWithLabel
+          text={"Disable E-Mail Notifications"}
+          border={false}
+        />
+      </SettingsMainBox>
+
+      <ButtonsMainBox>
+        <PrimaryButton variant="contained">Update Settings</PrimaryButton>
+        <SecondaryButton>Cancel</SecondaryButton>
+      </ButtonsMainBox>
     </>
   );
 }

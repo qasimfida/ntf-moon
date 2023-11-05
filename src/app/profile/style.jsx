@@ -96,11 +96,12 @@ export const ProfilePicSection = styled(Box)(
 export const ProfilePicMainBox = styled(Box)(
   ({ theme: { palette, breakpoints } }) => ({
     display: "flex",
-    width: "100%",
+    width: "fit-content",
     flexDirection: "column",
     marginBottom: "20px",
     [breakpoints.down("md")]: {
       alignItems: "center",
+      width: "100%",
     },
   })
 );
@@ -156,12 +157,21 @@ export const GreyText = styled(Typography)(
   })
 );
 
+export const TextBold = styled(Typography)(
+  ({ theme: { palette, breakpoints } }) => ({
+    fontSize: "14px",
+    color: palette.common.black,
+    fontWeight: "bold",
+  })
+);
+
 export const CoverPicMainBox = styled(Box)(
   ({ theme: { palette, breakpoints } }) => ({
     display: "flex",
     width: "100%",
     flexDirection: "column",
     marginBottom: "20px",
+    flexGrow: 1,
   })
 );
 

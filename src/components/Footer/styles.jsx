@@ -4,7 +4,7 @@ import { Input } from "../Input";
 
 export const Wrapper = styled(Box)(({ theme }) => ({
   paddingTop: theme.spacing(8.3),
-  backgroundColor: theme.palette.grey[400],
+  backgroundColor: theme.palette.common.white,
   ".mt_16": {
     marginTop: theme.spacing(2),
   },
@@ -12,25 +12,29 @@ export const Wrapper = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(5),
   },
 }));
-export const Heading = styled(Typography)(({ theme }) => ({
+export const Heading = styled(Typography)(({ theme: { palette } }) => ({
   fontWeight: 700,
+  color: palette.common.black,
 }));
 export const StyledInput = styled(Input)(({ theme }) => ({
-  marginTop: theme.spacing(3),
+  marginTop: theme.spacing(1.3),
+  height: "40px",
+  minWidth: "300px",
+  marginBottom: theme.spacing(4),
 }));
-export const IconsWrapper = styled(Box)(({ theme }) => ({
+export const IconsWrapper = styled(Box)(({ theme: { spacing } }) => ({
   display: "flex",
-  marginTop: theme.spacing(1),
-  gap: theme.spacing(2),
+  marginTop: spacing(1),
+  gap: spacing(2),
 }));
 export const IconWrapper = styled("a")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: "8px",
+  borderRadius: "14px",
   cursor: "pointer",
   backgroundColor: theme.palette.common.black,
-  padding: theme.spacing(1.3),
+  padding: theme.spacing(1),
   svg: {
     color:
       theme.palette.mode === "dark"
@@ -40,54 +44,59 @@ export const IconWrapper = styled("a")(({ theme }) => ({
     height: "34px",
   },
 }));
-export const SubHeading = styled("a")(({ theme }) => ({
+export const SubHeading = styled("a")(({ theme: { palette, spacing } }) => ({
   display: "flex",
   alignItems: "column",
   justifyContent: "start",
   cursor: "pointer",
   fontWeight: 700,
   fontSize: "0.875rem",
-  color: theme.palette.grey[800],
-  marginBottom: theme.spacing(1.3),
+  color: palette.grey[800],
+  marginBottom: spacing(1.3),
   "&:hover": {
     textDecoration: "underline",
   },
 }));
-export const PowerDescription = styled(Typography)(({ theme }) => ({
-  cursor: "auto",
-  fontWeight: 400,
-  fontSize: "0.875rem",
-  color: theme.palette.grey[800],
-}));
+export const PowerDescription = styled(Typography)(
+  ({ theme: { palette } }) => ({
+    cursor: "auto",
+    fontWeight: 400,
+    fontSize: "0.875rem",
+    color: palette.grey[800],
+  })
+);
 export const CopyRight = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: theme.spacing(4.3, 4),
+  minHeight: "70px",
+  gap: theme.spacing(2),
+  padding: theme.spacing(3, 4),
   marginTop: theme.spacing(9),
   borderTop: `1px solid ${theme.palette.grey[900]}`,
+  flexWrap: "wrap",
 }));
 export const MainText = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: theme.spacing(2.8),
+  flexWrap: "wrap",
 }));
-export const StyledTypo = styled(Typography)(({ theme }) => ({
+export const StyledTypo = styled(Typography)(({ theme: { palette } }) => ({
+  color: palette.common.black,
   fontWeight: 700,
-  fontSize: "0.75rem",
 }));
-export const LanguageWrapper = styled(Box)(({ theme }) => ({
+export const LanguageWrapper = styled(Box)(({ theme: { spacing } }) => ({
   display: "flex",
   alignItems: "center",
-  gap: theme.spacing(2.8),
+  gap: spacing(2.8),
 }));
-export const YearTypography = styled(Typography)(({ theme }) => ({
+export const YearTypography = styled(Typography)(({ theme: { palette } }) => ({
   fontWeight: 500,
-  fontSize: "0.75rem",
-  color: theme.palette.grey[800],
+  color: palette.grey[800],
 }));
-export const Circle = styled(Typography)(({ theme }) => ({
+export const Circle = styled(Typography)(({ theme: { palette } }) => ({
   width: "46px",
   height: "46px",
   borderRadius: "50%",
-  border: `1px solid ${theme.palette.grey[900]} `,
+  border: `1px solid ${palette.grey[900]} `,
 }));
