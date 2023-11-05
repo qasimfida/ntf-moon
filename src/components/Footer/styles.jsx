@@ -12,8 +12,9 @@ export const Wrapper = styled(Box)(({ theme }) => ({
     marginTop: theme.spacing(5),
   },
 }));
-export const Heading = styled(Typography)(({ theme }) => ({
+export const Heading = styled(Typography)(({ theme: { palette } }) => ({
   fontWeight: 700,
+  color: palette.common.black,
 }));
 export const StyledInput = styled(Input)(({ theme }) => ({
   marginTop: theme.spacing(1.3),
@@ -21,10 +22,10 @@ export const StyledInput = styled(Input)(({ theme }) => ({
   minWidth: "300px",
   marginBottom: theme.spacing(4),
 }));
-export const IconsWrapper = styled(Box)(({ theme }) => ({
+export const IconsWrapper = styled(Box)(({ theme: { spacing } }) => ({
   display: "flex",
-  marginTop: theme.spacing(1),
-  gap: theme.spacing(2),
+  marginTop: spacing(1),
+  gap: spacing(2),
 }));
 export const IconWrapper = styled("a")(({ theme }) => ({
   display: "flex",
@@ -43,25 +44,27 @@ export const IconWrapper = styled("a")(({ theme }) => ({
     height: "34px",
   },
 }));
-export const SubHeading = styled("a")(({ theme }) => ({
+export const SubHeading = styled("a")(({ theme: { palette, spacing } }) => ({
   display: "flex",
   alignItems: "column",
   justifyContent: "start",
   cursor: "pointer",
   fontWeight: 700,
   fontSize: "0.875rem",
-  color: theme.palette.grey[800],
-  marginBottom: theme.spacing(1.3),
+  color: palette.grey[800],
+  marginBottom: spacing(1.3),
   "&:hover": {
     textDecoration: "underline",
   },
 }));
-export const PowerDescription = styled(Typography)(({ theme }) => ({
-  cursor: "auto",
-  fontWeight: 400,
-  fontSize: "0.875rem",
-  color: theme.palette.grey[800],
-}));
+export const PowerDescription = styled(Typography)(
+  ({ theme: { palette } }) => ({
+    cursor: "auto",
+    fontWeight: 400,
+    fontSize: "0.875rem",
+    color: palette.grey[800],
+  })
+);
 export const CopyRight = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
@@ -78,23 +81,22 @@ export const MainText = styled(Box)(({ theme }) => ({
   gap: theme.spacing(2.8),
   flexWrap: "wrap",
 }));
-export const StyledTypo = styled(Typography)(({ theme }) => ({
+export const StyledTypo = styled(Typography)(({ theme: { palette } }) => ({
+  color: palette.common.black,
   fontWeight: 700,
-  fontSize: "0.75rem",
 }));
-export const LanguageWrapper = styled(Box)(({ theme }) => ({
+export const LanguageWrapper = styled(Box)(({ theme: { spacing } }) => ({
   display: "flex",
   alignItems: "center",
-  gap: theme.spacing(2.8),
+  gap: spacing(2.8),
 }));
-export const YearTypography = styled(Typography)(({ theme }) => ({
+export const YearTypography = styled(Typography)(({ theme: { palette } }) => ({
   fontWeight: 500,
-  fontSize: "0.75rem",
-  color: theme.palette.grey[800],
+  color: palette.grey[800],
 }));
-export const Circle = styled(Typography)(({ theme }) => ({
+export const Circle = styled(Typography)(({ theme: { palette } }) => ({
   width: "46px",
   height: "46px",
   borderRadius: "50%",
-  border: `1px solid ${theme.palette.grey[900]} `,
+  border: `1px solid ${palette.grey[900]} `,
 }));
