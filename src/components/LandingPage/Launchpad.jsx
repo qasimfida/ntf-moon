@@ -51,8 +51,9 @@ const Launchpad = () => {
         flexDirection={"row"}
         display={"flex"}
         justifyContent={"space-between"}
-        height={50}
         alignItems={"center"}
+        flexWrap={"wrap"}
+        gap={"20px"}
       >
         <Typography
           fontSize={28}
@@ -88,11 +89,12 @@ const Launchpad = () => {
         </Box>
       </Box>
       <Box
-        mt={"37px"}
+        my={"37px"}
         justifyContent={"space-between"}
         flexWrap={"wrap"}
         display={"flex"}
         flexDirection={"row"}
+        gap={"20px"}
       >
         {ActiveMintList.map(renderItem)}
       </Box>
@@ -102,8 +104,9 @@ const Launchpad = () => {
         flexDirection={"row"}
         display={"flex"}
         justifyContent={"space-between"}
-        height={50}
         alignItems={"center"}
+        flexWrap={"wrap"}
+        gap={"20px"}
       >
         <Typography
           fontSize={28}
@@ -139,11 +142,12 @@ const Launchpad = () => {
         </Box>
       </Box>
       <Box
-        mt={"37px"}
+        my={"37px"}
         justifyContent={"space-between"}
         flexWrap={"wrap"}
         display={"flex"}
         flexDirection={"row"}
+        gap={"20px"}
       >
         {UpcommingMintList.map(renderItem)}
       </Box>

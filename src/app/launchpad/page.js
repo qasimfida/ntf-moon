@@ -12,16 +12,8 @@ export default function LaunchpadIndex() {
   return (
     <MainSetion>
       <MainBox>
-        {/* <Box
-        sx={{
-          minHeight: "100vh",
-          backgroundColor: themeMode === "light" ? "#fff" : "#000",
-        }}
-      > */}
         <Launchpad />
       </MainBox>
-      <Box mt={5}>{/* <Footer /> */}</Box>
-      {/* </Box> */}
     </MainSetion>
   );
 }

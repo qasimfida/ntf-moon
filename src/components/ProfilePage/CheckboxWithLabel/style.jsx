@@ -33,5 +33,14 @@ export const StyledCheckbox = styled(Checkbox)(
   ({ theme: { palette, breakpoints } }) => ({
     width: "20px",
     color: "#7A52F4",
+    "&.Mui-checked": {
+      color: "#7A52F4",
+      "& .mui-theme-1hjwbh6-MuiSvgIcon-root": {
+        color: "none",
+      },
+      "& .MuiSvgIcon-root": {
+        color: "#7A52F4",
+      },
+    },
   })
 );

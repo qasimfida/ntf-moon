@@ -41,15 +41,20 @@ const lightPalette = {
   },
   common: {
     white: "#000",
+    grey: "#F5F8F8",
   },
   boxShadow: {
     appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
+  },
+  borderColor: {
+    main: "#5D5D5B",
   },
   grey: {
     400: "#f5f7f7",
     600: "#b0b2b1",
     800: "#5D5D5B",
     900: "#8e9392",
+    1000: "#EBF0F080",
   },
   dark: {
     400: "#393D3B",
@@ -71,15 +76,20 @@ const darkPalette = {
   },
   common: {
     white: "#fff",
+    grey: "#181818",
   },
   boxShadow: {
     appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
+  },
+  borderColor: {
+    main: "#5D5D5B",
   },
   grey: {
     400: "#171818",
     600: "#b0b2b1",
     800: "#5D5D5B",
     900: "#8e9392",
+    1000: "#EBF0F01A",
   },
   dark: {
     400: "#393D3B",
@@ -106,7 +116,6 @@ export const theme = (mode) =>
       tokenHoverColor: {
         color: "#D9D9D9",
       },
-
       boxShadow: {
         appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
       },

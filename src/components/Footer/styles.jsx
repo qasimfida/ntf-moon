@@ -3,18 +3,14 @@ import { Box, Typography, styled } from "@mui/material";
 import { Input } from "../Input";
 
 export const Wrapper = styled(Box)(({ theme }) => ({
-  paddingTop: theme.spacing(8.3),
-  backgroundColor: theme.palette.common.white,
-  ".mt_16": {
-    marginTop: theme.spacing(2),
-  },
-  ".mt_40": {
-    marginTop: theme.spacing(5),
-  },
+  paddingTop: "66px",
+  backgroundColor: theme.palette.mode == "dark" ? "#181818" : "#F5F8F8",
 }));
+
 export const Heading = styled(Typography)(({ theme: { palette } }) => ({
   fontWeight: 700,
   color: palette.common.black,
+  marginBottom: "14px",
 }));
 export const StyledInput = styled(Input)(({ theme }) => ({
   marginTop: theme.spacing(1.3),
@@ -83,6 +79,7 @@ export const MainText = styled(Box)(({ theme }) => ({
 }));
 export const StyledTypo = styled(Typography)(({ theme: { palette } }) => ({
   color: palette.common.black,
+  fontSize: "12px",
   fontWeight: 700,
 }));
 export const LanguageWrapper = styled(Box)(({ theme: { spacing } }) => ({

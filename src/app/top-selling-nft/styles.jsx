@@ -14,7 +14,6 @@ export const MainHeading = styled(Typography)(
   ({ theme: { palette, breakpoints } }) => ({
     fontSize: "42px",
     fontStyle: "normal",
-    fontFamily: "inherit",
     fontWeight: 800,
     lineHeight: "normal",
     color: palette.text.primary,
@@ -134,7 +133,7 @@ export const Row = styled(Box)(({ theme: { palette, breakpoints } }) => ({
   minHeight: "68px",
   borderRadius: "8px",
   padding: "10px 16px",
-  border: `1px solid ${palette.borderColor.primary}`,
+  border: `1px solid ${palette.mode == "light" ? "#CFDBD599" : "#CFDBD526"}`,
   [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
     flexDirection: "row",
   },
@@ -178,7 +177,6 @@ export const Row = styled(Box)(({ theme: { palette, breakpoints } }) => ({
 export const RowText = styled(Typography)(
   ({ theme: { palette, breakpoints } }) => ({
     color: palette.text.primary,
-    fontFamily: "Inter",
     fontSize: "14px",
     fontStyle: "normal",
     fontWeight: 700,
@@ -210,7 +208,6 @@ export const TableHead = styled(Box)(({ theme: { palette, breakpoints } }) => ({
 export const TableHeadText = styled(Typography)(
   ({ theme: { palette, breakpoints } }) => ({
     color: palette.text.primary,
-    fontFamily: "Inter",
     fontSize: "12px",
     fontStyle: "normal",
     fontWeight: 700,
@@ -223,8 +220,9 @@ export const TableHeadText = styled(Typography)(
 
 export const LoadMoreButton = styled(Button)(
   ({ theme: { palette, breakpoints } }) => ({
-    backgroundColor: palette.common.white,
-    color: palette.common.black,
+    backgroundColor:
+      palette.mode == "light" ? palette.primary.light : "#EBF0F01A",
+    color: palette.mode == "light" ? palette.primary.dark : "white",
     padding: "9px 16px",
     borderRadius: "24px",
     textTransform: "none",
@@ -239,19 +237,14 @@ export const LoadMoreButton = styled(Button)(
     display: "block",
     textAlign: "center",
     border: `1px solid ${palette.borderColor.primary}`,
-    [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
-      // fontSize: "1.25rem",
-    },
     "&:hover": {
       color: palette.primary.dark,
-      border: `1px solid ${palette.primary.light}`,
       backgroundColor: palette.primary.light,
       boxShadow: "none",
     },
     "&.active": {
       color: "white",
       backgroundColor: palette.primary.main,
-      border: "none",
     },
   })
 );

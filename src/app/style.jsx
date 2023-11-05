@@ -1,5 +1,6 @@
 "use client";
 
+import { theme } from "@/components/Theme/constants";
 import { Box, Typography, styled } from "@mui/material";
 
 export const MainBox = styled(Box)(({ theme: { palette, breakpoints } }) => ({
@@ -114,7 +115,6 @@ export const TableHead = styled(Box)(({ theme: { palette, breakpoints } }) => ({
 export const TableHeadText = styled(Typography)(
   ({ theme: { palette, breakpoints } }) => ({
     color: palette.text.primary,
-    fontFamily: "Inter",
     fontSize: "12px",
     fontStyle: "normal",
     fontWeight: 700,
@@ -160,13 +160,26 @@ export const Row = styled(Box)(({ theme: { palette, breakpoints } }) => ({
 export const RowText = styled(Typography)(
   ({ theme: { palette, breakpoints } }) => ({
     color: palette.text.primary,
-    fontFamily: "Inter",
     fontSize: "14px",
     fontStyle: "normal",
     fontWeight: 700,
     lineHeight: "21px",
     [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
       // fontSize: "1.25rem",
+    },
+  })
+);
+
+export const SectionHeading = styled(Typography)(
+  ({ theme: { palette, breakpoints } }) => ({
+    color: palette.text.primary,
+    fontSize: "28px",
+    fontStyle: "normal",
+    fontWeight: 800,
+    margin: "10px 0px",
+    lineHeight: "27px",
+    [breakpoints.down("md")]: {
+      fontSize: "20px",
     },
   })
 );
