@@ -183,3 +183,74 @@ export const SectionHeading = styled(Typography)(
     },
   })
 );
+
+export const RecommendedCollections = styled(Box)(
+  ({ theme: { palette, breakpoints } }) => ({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    gap: 30,
+    padding: "0 20px",
+    width: "100%",
+    height: 512,
+    backgroundColor: "pink",
+    "&& > div:nth-child(2)": {
+      display: "flex",
+      gap: 6,
+    },
+  })
+);
+
+export const CollectionCard = styled(Box)(
+  ({ theme: { palette, breakpoints } }) => ({
+    padding: 24,
+    borderRadius: 8,
+    width: 410,
+    height: 324,
+    backgroundColor: palette.common.white,
+    "&& > div:nth-child(1)": {
+      width: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+    },
+    "&& > div:nth-child(1) > div": {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      height: 208,
+    },
+    "&& > div:nth-child(1) > img": {
+      width: "241px !important",
+      height: "208px !important",
+    },
+    "&& > div:nth-child(1) > div > img": {
+      width: "109px !important",
+      height: "98px !important",
+    },
+    "&& > h2": {
+      color: palette.text.primary,
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: 800,
+      lineHeight: "24px",
+      // margin: "10px 0px",
+      marginTop: 22,
+      marginLeft: 8,
+    },
+    "&& > h3": {
+      color: palette.text.primary,
+      fontSize: "14px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "21px",
+      marginLeft: 8,
+      "& > span": {
+        color: "red",
+        fontSize: "14px",
+        fontStyle: "normal",
+        fontWeight: 400,
+        lineHeight: "21px",
+      },
+    },
+  })
+);
