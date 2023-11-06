@@ -36,7 +36,7 @@ export const StyledDescription = styled(Typography)(
     marginTop: spacing(1),
     fontWeight: 400,
     lineHeight: "21px",
-    color: palette.grey[900],
+    color: palette.grey[800],
   })
 );
 export const StyledButton = styled(Button)(

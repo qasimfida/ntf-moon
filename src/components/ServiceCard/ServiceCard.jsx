@@ -1,4 +1,5 @@
-import { Button, Typography } from "@mui/material";
+"user client";
+
 import React from "react";
 import {
   CardContent,
@@ -9,6 +10,7 @@ import {
   Wrapper,
 } from "./styles";
 import Image from "next/image";
+import Link from "next/link";
 
 export const ServiceCard = ({ service }) => {
   const { image, title, description } = service;
@@ -22,7 +24,9 @@ export const ServiceCard = ({ service }) => {
           {title}
         </StyledTitle>
         <StyledDescription>{description}</StyledDescription>
-        <StyledButton variant="text">See more details</StyledButton>
+        <Link href={`/services/${title.replace(/ /g, "-")}`}>
+          <StyledButton variant="text">See more details</StyledButton>
+        </Link>
       </CardContent>
     </Wrapper>
   );

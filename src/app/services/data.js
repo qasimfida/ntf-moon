@@ -9,42 +9,42 @@ export const servicesData = [
   {
     id: 1,
     image: ServiceImg1,
-    title: "Artwork Creation",
+    title: "artwork creation",
     description:
       "Unlock your brand's potential with our exquisite NFT collection meticulously curated for the digital era.",
   },
   {
     id: 2,
     image: ServiceImg2,
-    title: "Marketing Concept",
+    title: "marketing concept",
     description:
       "Craft compelling campaigns, utilizing cutting-edge strategies for enhanced market penetration.",
   },
   {
     id: 3,
     image: ServiceImg3,
-    title: "Video Production",
+    title: "video production",
     description:
       "Elevate storytelling with cinematic production, conveying impactful messages visually.",
   },
   {
     id: 4,
     image: ServiceImg4,
-    title: "Project Consulting",
+    title: "project consulting",
     description:
       "Tailored consulting, offering expert guidance for streamlined project efficiency and success.",
   },
   {
     id: 5,
     image: ServiceImg5,
-    title: "Collection Launching",
+    title: "collection launching",
     description:
       "Let us handle your NFT collection launch, ensuring a smooth and successful introduction.",
   },
   {
     id: 6,
     image: ServiceImg6,
-    title: "Blockchain Solutions",
+    title: "blockchain solutions",
     description:
       "Optimize operations with our tailored blockchain solutions, ensuring efficiency, security, integration.",
   },

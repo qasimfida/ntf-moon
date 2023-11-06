@@ -25,6 +25,7 @@ const lightPalette = {
   grey: {
     400: "#f5f7f7",
     600: "#b0b2b1",
+    700: "#CFDBD5",
     800: "#5D5D5B",
     900: "#8e9392",
   },
@@ -52,11 +53,15 @@ const darkPalette = {
   grey: {
     400: "#171818",
     600: "#b0b2b1",
-    800: "#5D5D5B",
+    700: "#CFDBD5",
+    800: "#868887",
     900: "#8e9392",
   },
   dark: {
     400: "#393D3B",
+  },
+  borderColor: {
+    400: "#CFDBD5",
   },
 };
 
