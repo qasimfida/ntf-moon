@@ -4,8 +4,8 @@ import { CommonBanner } from "@/components/CommonBanner";
 import { StyledGrid, Wrapper } from "./styles";
 import { Heading } from "@/components/Heading";
 import { Container, Grid } from "@mui/material";
-import { servicesData } from "./data";
 import { ServiceCard } from "@/components/ServiceCard";
+import { servicesData } from "@/constants/serviceData";
 
 const Services = () => {
   return (
