@@ -12,6 +12,7 @@ export const Wrapper = styled(Box)(
     backgroundColor: palette.common.white,
     borderRadius: "16px",
     height: "100%",
+    width: "100%",
   })
 );
 

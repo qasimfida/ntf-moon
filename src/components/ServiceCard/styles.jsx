@@ -27,6 +27,7 @@ export const ImageWrapper = styled(Box)({
 export const StyledTitle = styled(Typography)(
   ({ theme: { palette, spacing } }) => ({
     fontWeight: 700,
+    textTransform: "capitalize",
     marginTop: spacing(3),
     color: palette.common.black,
   })

@@ -1,6 +1,5 @@
 "user client";
 
-import React from "react";
 import {
   CardContent,
   ImageWrapper,
@@ -13,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const ServiceCard = ({ service }) => {
-  const { image, title, description } = service;
+  const { image, title, description, id } = service;
   return (
     <Wrapper>
       <CardContent>
@@ -24,7 +23,7 @@ export const ServiceCard = ({ service }) => {
           {title}
         </StyledTitle>
         <StyledDescription>{description}</StyledDescription>
-        <Link href={`/services/${title.replace(/ /g, "-")}`}>
+        <Link href={`/services/${id}`}>
           <StyledButton variant="text">See more details</StyledButton>
         </Link>
       </CardContent>
