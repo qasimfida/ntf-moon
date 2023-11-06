@@ -1,9 +1,12 @@
 "use client";
 import useGetActiveTheme from "@/hooks/useGetActiveTheme";
 import {
+  CollectionCard,
   MainBox,
+  RecommendedCollections,
   Row,
   RowText,
+  SectionHeading,
   SliderMain,
   Table,
   TableBoxMain,
@@ -166,6 +169,50 @@ const Home = () => {
             </Table>
           </Box>
         </TableBoxMain>
+        <RecommendedCollections>
+          <SectionHeading>Recommended Collections</SectionHeading>
+          <Box>
+            {new Array(3).fill(0).map((val, ind) => (
+              <Box key={val}>
+                <CollectionCard>
+                  <Box>
+                    <Image
+                      src="/images/Art.png"
+                      width={1000}
+                      height={1000}
+                      alt=""
+                    />
+                    <Box>
+                      <Image
+                        src="/images/Art.png"
+                        width={1000}
+                        height={1000}
+                        alt=""
+                      />
+                      <Image
+                        src="/images/Art.png"
+                        width={1000}
+                        height={1000}
+                        alt=""
+                      />
+                    </Box>
+                  </Box>
+                  <Typography variant="h2">Celestial Spirits</Typography>
+                  <Typography variant="h3">
+                    2222 <span>items</span>
+                  </Typography>
+                  {/* <Box>
+            <Image src="/images/Art.png" height={208} width={241} alt="" />
+            <Box>
+              <Image src="/images/Art.png" height={98} width={109} alt="" />
+              <Image src="/images/Art.png" height={98} width={109} alt="" />
+            </Box>
+          </Box> */}
+                </CollectionCard>
+              </Box>
+            ))}
+          </Box>
+        </RecommendedCollections>
       </MainBox>
     </>
   );
