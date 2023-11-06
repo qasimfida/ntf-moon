@@ -11,14 +11,14 @@ export const Details = styled(Box)(({ theme: { spacing } }) => ({
 }));
 export const StyledGrid = styled(Grid)(({ theme }) => ({
   width: "100%",
+  margin: 0,
 }));
 export const ImageWrapper = styled(Box)(({ theme }) => ({
   width: "100%",
   height: "240px",
   boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
   borderRadius: "16px",
-
-  "& img": {
+  img: {
     width: "100%",
     height: "100%",
     objectFit: "cover",
@@ -53,9 +53,9 @@ export const Section = styled(Box)(({ theme: { spacing, breakpoints } }) => ({
   position: "relative",
   marginTop: spacing(7),
 }));
-export const BackgroundBanner = styled(Box)(({ theme: { palette, mode } }) => ({
+export const BackgroundColor = styled(Box)(({ theme: { palette } }) => ({
   backgroundColor:
-    mode === "light" ? palette.primary.light : palette.primary.main,
+    palette.mode === "light" ? palette.primary.light : palette.primary.main,
   width: "100%",
   height: "154px",
   position: "absolute",
@@ -64,6 +64,27 @@ export const BackgroundBanner = styled(Box)(({ theme: { palette, mode } }) => ({
   transform: "translate(-50%, -50%)",
   zIndex: 0,
 }));
+export const ImageBackground = styled(Box)(
+  ({ theme: { spacing, palette, breakpoints } }) => ({
+    width: "100%",
+    margin: spacing(0, 8),
+    height: "260px",
+    zIndex: 999,
+    padding: spacing(2.7, 3),
+    border: `1px solid ${palette.grey[700]}`,
+    background: palette.common.white,
+    borderRadius: "16px",
+    img: {
+      width: "100%",
+      height: "100%",
+      borderRadius: "10px",
+      objectFit: "cover",
+    },
+    [breakpoints.down("md")]: {
+      margin: spacing(0, 3),
+    },
+  })
+);
 export const AnimationImage = styled(Box)(
   ({ theme: { palette, spacing } }) => ({
     width: "100%",

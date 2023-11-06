@@ -1,18 +1,19 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { CommonBanner } from "@/components/CommonBanner";
 import {
   AnimationImage,
-  BackgroundBanner,
+  BackgroundColor,
   ContactText,
   ContactUs,
   Details,
   HeadingTwo,
   HeadingWrapper,
+  ImageBackground,
   ImageWrapper,
   Section,
   SimpleCardGrid,
+  StyledGrid,
   StyledOfferTypo,
   VisionDescription,
   Wrapper,
@@ -21,12 +22,13 @@ import { Heading } from "@/components/Heading";
 import { SimpleCard } from "@/components/SimpleCard";
 import { Box, Button, Container, Grid } from "@mui/material";
 import Image from "next/image";
-import { StyledGrid } from "./styles";
-import Animation1 from "../../../../public/images/animation-1.png";
-import Animation2 from "../../../../public/images/animation-2.png";
-import Animation3 from "../../../../public/images/animation-3.png";
-import Animation4 from "../../../../public/images/animation-4.png";
 import { servicesData } from "@/constants/serviceData";
+
+import {
+  AnimationImages,
+  VideoImages,
+  BackgroundImages,
+} from "@/constants/ImageResources";
 
 const ServiceDetail = ({ params }) => {
   const [selectedService, setSelectedService] = useState(null);
@@ -94,31 +96,53 @@ const ServiceDetail = ({ params }) => {
         </Details>
       </Container>
       <Section>
-        <BackgroundBanner />
-        <Container>
-          <Grid container gap={2} justifyContent="space-between">
-            <Grid item md={2.5} zIndex={99}>
-              <AnimationImage>
-                <Image src={Animation1} />
-              </AnimationImage>
+        <BackgroundColor />
+        {title === "Artwork Creation" && (
+          <Container>
+            <Grid container gap={2} justifyContent="space-between">
+              {AnimationImages.map((animation, index) => (
+                <Grid item md={2.5} zIndex={99} key={index}>
+                  <AnimationImage>
+                    <Image src={animation} />
+                  </AnimationImage>
+                </Grid>
+              ))}
             </Grid>
-            <Grid item md={2.5} zIndex={99}>
-              <AnimationImage>
-                <Image src={Animation2} />
-              </AnimationImage>
+          </Container>
+        )}
+        {title === "Marketing Concept" && (
+          <ImageBackground>
+            <Image src={BackgroundImages[0]} alt="Background Banner" />
+          </ImageBackground>
+        )}
+        {title === "Project Consulting" && (
+          <ImageBackground>
+            <Image src={BackgroundImages[1]} alt="Background Banner" />
+          </ImageBackground>
+        )}
+        {title === "Collection Launching" && (
+          <ImageBackground>
+            <Image src={BackgroundImages[2]} alt="Background Banner" />
+          </ImageBackground>
+        )}
+        {title === "Blockchain Solutions" && (
+          <ImageBackground>
+            <Image src={BackgroundImages[3]} alt="Background Banner" />
+          </ImageBackground>
+        )}
+        {title === "Video Production" && (
+          <Container>
+            <Grid container gap={3} justifyContent="center">
+              {VideoImages.map((videoImg, index) => (
+                <Grid item md={3} zIndex={99} key={index}>
+                  <AnimationImage>
+                    <Image src={videoImg} />
+                  </AnimationImage>
+                </Grid>
+              ))}
             </Grid>
-            <Grid item md={2.5} zIndex={99}>
-              <AnimationImage>
-                <Image src={Animation3} />
-              </AnimationImage>
-            </Grid>
-            <Grid item md={2.5} zIndex={99}>
-              <AnimationImage>
-                <Image src={Animation4} />
-              </AnimationImage>
-            </Grid>
-          </Grid>
-        </Container>
+          </Container>
+        )}
       </Section>
       <Details className="pb-100">
         <Container>

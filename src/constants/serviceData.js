@@ -280,7 +280,7 @@ export const servicesData = [
       "Embark on an exciting venture with Moon Studios as your ally for a remarkable entry into the Web3 and NFT sphere. Our dedicated marketplace and seasoned team are geared to ensure a triumphant launch and sustained growth of your NFT collection.",
   },
   {
-    id: "blockchain solutions",
+    id: "blockchain-solutions",
     image: ServiceImg6,
     title: "Blockchain Solutions",
     description:
