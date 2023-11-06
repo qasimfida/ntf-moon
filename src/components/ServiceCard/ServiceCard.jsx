@@ -1,5 +1,5 @@
-import { Button, Typography } from "@mui/material";
-import React from "react";
+"user client";
+
 import {
   CardContent,
   ImageWrapper,
@@ -9,9 +9,10 @@ import {
   Wrapper,
 } from "./styles";
 import Image from "next/image";
+import Link from "next/link";
 
 export const ServiceCard = ({ service }) => {
-  const { image, title, description } = service;
+  const { image, title, description, id } = service;
   return (
     <Wrapper>
       <CardContent>
@@ -22,7 +23,9 @@ export const ServiceCard = ({ service }) => {
           {title}
         </StyledTitle>
         <StyledDescription>{description}</StyledDescription>
-        <StyledButton variant="text">See more details</StyledButton>
+        <Link href={`/services/${id}`}>
+          <StyledButton variant="text">See more details</StyledButton>
+        </Link>
       </CardContent>
     </Wrapper>
   );
