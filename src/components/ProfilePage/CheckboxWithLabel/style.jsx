@@ -32,7 +32,7 @@ export const CheckMainBox = styled(Box)(
 export const StyledCheckbox = styled(Checkbox)(
   ({ theme: { palette, breakpoints } }) => ({
     width: "20px",
-    color: "#7A52F4",
+    color: palette.primary.main,
     "&.Mui-checked": {
       color: "#7A52F4",
       "& .mui-theme-1hjwbh6-MuiSvgIcon-root": {
