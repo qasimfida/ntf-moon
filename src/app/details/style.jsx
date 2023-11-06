@@ -4,7 +4,7 @@ export const MainBox = styled(Box)(({ theme: { palette, breakpoints } }) => ({
   display: "block",
   minHeight: "calc(100vh - 84px)",
   margin: "0px auto",
-  width: "87%",
+  width: "88%",
   padding: "47px 4px 0px 4px",
 }));
 

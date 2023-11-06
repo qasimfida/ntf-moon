@@ -19,8 +19,35 @@ const lightPalette = {
     main: "#f4c952",
     light: "#fff5d9",
   },
+  grey: {
+    light: "#CCCCCC",
+    main: "#7F7F7F",
+    dark: "#4D4D4D",
+    400: "#f5f7f7",
+    600: "#b0b2b1",
+    800: "#5D5D5B",
+    900: "#979797",
+    1000: "#EBF0F080",
+  },
+  text: {
+    primary: "#000000",
+    secondary: "#000000",
+    red: "#f71111",
+    green: "#03DB80",
+  },
+  background: {
+    default: "#f2f2f2",
+    paper: "#ffffff",
+  },
   common: {
     white: "#000",
+    grey: "#F5F8F8",
+  },
+  boxShadow: {
+    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
+  },
+  borderColor: {
+    main: "#5D5D5B",
   },
   grey: {
     400: "#f5f7f7",
@@ -28,6 +55,7 @@ const lightPalette = {
     700: "#CFDBD5",
     800: "#5D5D5B",
     900: "#8e9392",
+    1000: "#EBF0F080",
   },
   dark: {
     400: "#393D3B",
@@ -49,6 +77,13 @@ const darkPalette = {
   },
   common: {
     white: "#fff",
+    grey: "#181818",
+  },
+  boxShadow: {
+    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
+  },
+  borderColor: {
+    main: "#5D5D5B",
   },
   grey: {
     400: "#171818",
@@ -56,6 +91,7 @@ const darkPalette = {
     700: "#CFDBD5",
     800: "#868887",
     900: "#8e9392",
+    1000: "#EBF0F01A",
   },
   dark: {
     400: "#393D3B",
@@ -82,19 +118,11 @@ export const theme = (mode) =>
         black: mode === "light" ? "#000" : "#fff",
         white: mode === "light" ? "#fff" : "#000",
       },
-      typography: {
-        color: mode === "light" ? "#000" : "#fff",
-      },
       tokenHoverColor: {
         color: "#D9D9D9",
       },
-
       boxShadow: {
         appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
-      },
-
-      typography: {
-        main: "#5D5D5B",
       },
       borderColor: {
         main: "#5D5D5B",
@@ -122,6 +150,7 @@ export const theme = (mode) =>
         fontSize: "12px",
       },
       color: mode === "light" ? "#fff" : "#fff",
+      main: "#5D5D5B",
     },
     breakpoints: { values: breakpoints },
     components: {

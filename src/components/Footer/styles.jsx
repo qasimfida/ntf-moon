@@ -2,39 +2,40 @@
 import { Box, Typography, styled } from "@mui/material";
 import { Input } from "../Input";
 
-export const Wrapper = styled(Box)(({ theme: { palette, spacing } }) => ({
-  paddingTop: spacing(8.3),
-  backgroundColor: palette.grey[400],
-  ".mt_16": {
-    marginTop: spacing(2),
-  },
-  ".mt_40": {
-    marginTop: spacing(5),
-  },
+export const Wrapper = styled(Box)(({ theme }) => ({
+  paddingTop: "66px",
+  backgroundColor: theme.palette.mode == "dark" ? "#181818" : "#F5F8F8",
 }));
+
 export const Heading = styled(Typography)(({ theme: { palette } }) => ({
   fontWeight: 700,
   color: palette.common.black,
+  marginBottom: "14px",
 }));
-export const StyledInput = styled(Input)(({ theme: { spacing } }) => ({
-  marginTop: spacing(3),
+export const StyledInput = styled(Input)(({ theme }) => ({
+  marginTop: theme.spacing(1.3),
+  height: "40px",
+  minWidth: "300px",
+  marginBottom: theme.spacing(4),
 }));
 export const IconsWrapper = styled(Box)(({ theme: { spacing } }) => ({
   display: "flex",
   marginTop: spacing(1),
   gap: spacing(2),
 }));
-export const IconWrapper = styled("a")(({ theme: { palette, spacing } }) => ({
+export const IconWrapper = styled("a")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: "8px",
+  borderRadius: "14px",
   cursor: "pointer",
-  backgroundColor: palette.common.black,
-  padding: spacing(1.3),
+  backgroundColor: theme.palette.common.black,
+  padding: theme.spacing(1),
   svg: {
     color:
-      palette.mode === "dark" ? palette.common.white : palette.common.white,
+      theme.palette.mode === "dark"
+        ? theme.palette.common.white
+        : theme.palette.common.white,
     width: "34px",
     height: "34px",
   },
@@ -60,20 +61,25 @@ export const PowerDescription = styled(Typography)(
     color: palette.grey[800],
   })
 );
-export const CopyRight = styled(Box)(({ theme: { palette, spacing } }) => ({
+export const CopyRight = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: spacing(4.3, 4),
-  marginTop: spacing(9),
-  borderTop: `1px solid ${palette.grey[900]}`,
+  minHeight: "70px",
+  gap: theme.spacing(2),
+  padding: theme.spacing(3, 4),
+  marginTop: theme.spacing(9),
+  borderTop: `1px solid ${theme.palette.grey[900]}`,
+  flexWrap: "wrap",
 }));
-export const MainText = styled(Box)(({ theme: { spacing } }) => ({
+export const MainText = styled(Box)(({ theme }) => ({
   display: "flex",
-  gap: spacing(2.8),
+  gap: theme.spacing(2.8),
+  flexWrap: "wrap",
 }));
 export const StyledTypo = styled(Typography)(({ theme: { palette } }) => ({
   color: palette.common.black,
+  fontSize: "12px",
   fontWeight: 700,
 }));
 export const LanguageWrapper = styled(Box)(({ theme: { spacing } }) => ({

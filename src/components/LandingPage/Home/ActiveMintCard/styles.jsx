@@ -1,14 +1,30 @@
 import styled from "@emotion/styled";
-import { Button, LinearProgress } from "@mui/material";
+import { Box, Button, LinearProgress } from "@mui/material";
+
+export const MintBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  gap: "16px",
+  padding: "24px",
+  width: "23%",
+  borderRadius: "16px",
+  border: `1px solid ${
+    theme.palette.mode == "light" ? "#CFDBD599" : "#CFDBD526"
+  }`,
+  [theme.breakpoints.down("lg")]: {
+    width: "48%",
+  },
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+  },
+}));
 
 export const WalletButton = styled(Button)(({ theme }) => ({
   width: "96px",
   height: "36px",
-  backgroundColor: "#E4DCFD",
-  color: "#7A52F4",
-  top: "17px",
-  left: "17px",
-
+  boxShadow: "none",
+  backgroundColor: theme.palette.mode == "dark" ? "#7A52F4" : "#E4DCFD",
+  color: theme.palette.mode == "dark" ? "#fff" : "#7A52F4",
   [theme.breakpoints.down("sm")]: {
     width: "96px",
     height: "36px",
@@ -17,11 +33,9 @@ export const WalletButton = styled(Button)(({ theme }) => ({
 export const DateButton = styled(Button)(({ theme }) => ({
   width: "120px",
   height: "32px",
-  backgroundColor: "#EBF0F0",
-  color: "#5D5D5B",
-  top: "17px",
-  left: "17px",
-
+  boxShadow: "none",
+  backgroundColor: theme.palette.grey[1000],
+  color: theme.palette.mode == "dark" ? "#fff" : "#000",
   [theme.breakpoints.down("sm")]: {
     width: "120px",
     height: "32px",

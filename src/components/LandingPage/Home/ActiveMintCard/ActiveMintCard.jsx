@@ -5,22 +5,14 @@ import {
   Typography,
   LinearProgress,
 } from "@mui/material";
-import { CustomProgressBar, DateButton, WalletButton } from "./styles";
+import { CustomProgressBar, DateButton, MintBox, WalletButton } from "./styles";
 import { Image } from "@mui/icons-material";
 import useGetActiveTheme from "@/hooks/useGetActiveTheme";
 
 const ActiveMintCard = ({ item }) => {
   const themeMode = useGetActiveTheme();
   return (
-    <Box
-      height="472px"
-      width="302px"
-      border={"1px solid gray"}
-      borderRadius={10}
-      padding={2}
-      mt={1}
-      key={item.id}
-    >
+    <MintBox key={item.id}>
       {item.date ? (
         <DateButton variant="contained" onClick={() => {}}>
           {item.date}
@@ -34,45 +26,47 @@ const ActiveMintCard = ({ item }) => {
         src={item.image}
         alt="My Image"
         style={{
-          maxWidth: "97%",
-          marginTop: "30px",
-          marginLeft: "1.5%",
+          maxWidth: "100%",
           borderRadius: 10,
         }}
       />
-      <Typography
-        variant="h5"
-        fontWeight={"bold"}
-        mt={1}
-        color={themeMode == "light" ? "#000" : "#fff"}
-      >
-        {item.title}
-      </Typography>
-      <Box flexDirection={"row"} display={"flex"}>
-        <Typography variant="body2" color={"gray"}>
-          Mint Price
-        </Typography>
+      <Box>
         <Typography
-          variant="body2"
-          ml={1}
+          variant="h5"
           fontWeight={"bold"}
+          mt={1}
           color={themeMode == "light" ? "#000" : "#fff"}
         >
-          {item.mintPrice}
+          {item.title}
         </Typography>
-      </Box>
-      <Box flexDirection={"row"} display={"flex"}>
-        <Typography variant="body2" color={"gray"}>
-          Collection Size
-        </Typography>
-        <Typography
-          variant="body2"
-          ml={1}
-          fontWeight={"bold"}
-          color={themeMode == "light" ? "#000" : "#fff"}
-        >
-          {item.collectionSize}
-        </Typography>
+        <Box marginTop={2}>
+          <Box flexDirection={"row"} display={"flex"}>
+            <Typography variant="body2" color={"gray"}>
+              Mint Price
+            </Typography>
+            <Typography
+              variant="body2"
+              ml={1}
+              fontWeight={"bold"}
+              color={themeMode == "light" ? "#000" : "#fff"}
+            >
+              {item.mintPrice}
+            </Typography>
+          </Box>
+          <Box flexDirection={"row"} display={"flex"}>
+            <Typography variant="body2" color={"gray"}>
+              Collection Size
+            </Typography>
+            <Typography
+              variant="body2"
+              ml={1}
+              fontWeight={"bold"}
+              color={themeMode == "light" ? "#000" : "#fff"}
+            >
+              {item.collectionSize}
+            </Typography>
+          </Box>
+        </Box>
       </Box>
 
       {!item.date && (
@@ -99,7 +93,7 @@ const ActiveMintCard = ({ item }) => {
           />
         </>
       )}
-    </Box>
+    </MintBox>
   );
 };
 

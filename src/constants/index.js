@@ -56,6 +56,11 @@ export const serahcItems = [
 
 export const profileSettingsNavOptions = [
   {
+    label: "Profile",
+    path: "/profile/profile-settings",
+    icon: <AccountCircle />,
+  },
+  {
     label: "Account Details",
     path: "/profile/account-details",
     icon: <AccountCircle />,
@@ -165,5 +170,72 @@ export const UpcommingMintList = [
     image:
       "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
     date: "13 Oct 2024",
+  },
+];
+
+export const pagesWithOnlyCopyrightSection = [
+  "/profile/notification-settings",
+  "/profile/account-details",
+  "/profile/profile-settings",
+];
+
+export const sliderImages = [
+  {
+    id: 1,
+    image:
+      "https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-260nw-1714666150.jpg",
+  },
+  {
+    id: 1,
+    image:
+      "https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-260nw-1714666150.jpg",
+  },
+  {
+    id: 1,
+    image:
+      "https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-260nw-1714666150.jpg",
+  },
+  {
+    id: 1,
+    image:
+      "https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-260nw-1714666150.jpg",
+  },
+];
+
+export const timelineList = [
+  {
+    id: 1,
+    title: "01",
+    descriptionTitle: "XRPL Collection Launch",
+    description:
+      "Launch the Celestial Spirit Collection on the XRP Ledger (XRPL), generating anticipation through social media engagement and ensuring seamless integration with XRPL platforms and wallets.",
+  },
+  {
+    id: 2,
+    title: "02",
+    descriptionTitle: "XRPL Collection Launch",
+    description:
+      "Launch the Celestial Spirit Collection on the XRP Ledger (XRPL), generating anticipation through social media engagement and ensuring seamless integration with XRPL platforms and wallets.",
+  },
+  {
+    id: 3,
+    title: "03",
+    descriptionTitle: "XRPL Collection Launch",
+    description:
+      "Launch the Celestial Spirit Collection on the XRP Ledger (XRPL), generating anticipation through social media engagement and ensuring seamless integration with XRPL platforms and wallets.",
+  },
+  {
+    id: 4,
+    title: "04",
+    descriptionTitle: "XRPL Collection Launch",
+    description:
+      "Launch the Celestial Spirit Collection on the XRP Ledger (XRPL), generating anticipation through social media engagement and ensuring seamless integration with XRPL platforms and wallets.",
+  },
+  {
+    id: 5,
+    title: "05",
+    descriptionTitle: "XRPL Collection Launch",
+    description:
+      "Launch the Celestial Spirit Collection on the XRP Ledger (XRPL), generating anticipation through social media engagement and ensuring seamless integration with XRPL platforms and wallets.",
   },
 ];

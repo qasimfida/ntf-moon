@@ -1,10 +1,8 @@
 "use client";
-import Footer from "@/components/Footer/Footer";
 // import Launchpad from "@/components/Launchpad/Launchpad";
+import { DetailsPage } from "@/components/DetailPage";
 import useGetActiveTheme from "@/hooks/useGetActiveTheme";
-import { Box } from "@mui/material";
 import { MainBox, MainSetion } from "./style";
-import Launchpad from "@/components/LandingPage/Launchpad";
 
 export default function LaunchpadIndex() {
   const themeMode = useGetActiveTheme();
@@ -12,7 +10,7 @@ export default function LaunchpadIndex() {
   return (
     <MainSetion>
       <MainBox>
-        <Launchpad />
+        <DetailsPage />
       </MainBox>
     </MainSetion>
   );
