@@ -199,171 +199,74 @@ export const SectionHeading = styled(Typography)(
     },
   })
 );
-export const CarouselContainer = styled(Box)(
+
+export const RecommendedCollections = styled(Box)(
   ({ theme: { palette, breakpoints } }) => ({
     display: "flex",
-    gap: -25,
+    flexDirection: "column",
+    justifyContent: "center",
+    gap: 30,
+    padding: "0 20px",
     width: "100%",
-    overflow: "hidden",
-    justifyContent: "space-between",
-    [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
-      padding: "2rem",
+    height: 512,
+    backgroundColor: "pink",
+    "&& > div:nth-child(2)": {
+      display: "flex",
+      gap: 6,
     },
   })
 );
-export const ImageSlide = styled(Box)(
-  ({ theme: { palette, breakpoints } }) => ({
-    position: "relative",
-    width: "50%",
-    height: 300,
-    background: "#f0f0f0",
-    overflow: "hidden",
-    border: "1px solid #ccc",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-  })
-);
 
-export const OverlappingImage = styled(Box)(
+export const CollectionCard = styled(Box)(
   ({ theme: { palette, breakpoints } }) => ({
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    zIndex: 1,
-  })
-);
-
-export const RecommendedCollection = styled(Typography)(
-  ({ theme: { palette, breakpoints } }) => ({
-    fontSize: "28px",
-    fontWeight: 800,
-    marginTop: 30,
-    marginBottom: 30,
-    color: palette.text.primary,
-  })
-);
-
-export const MainBoxContainer = styled(Box)(
-  ({ theme: { palette, breakpoints }, item }) => ({
+    padding: 24,
+    borderRadius: 8,
+    width: 410,
     height: 324,
-    width: 370,
     backgroundColor: palette.common.white,
-    boxShadow: "0px 8px 12px 0px rgba(153, 155, 168, 0.25)",
-    borderRadius: 15,
-    // marginTop: 20,
-
-    [breakpoints.down("md")]: {
-      marginTop: 10,
-      marginBottom: 10,
-    },
-  })
-);
-
-export const MainCollectionBox = styled(Box)(
-  ({ theme: { palette, breakpoints }, item }) => ({
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    width: "100%",
-    alignItems: "center",
-
-    [breakpoints.down("md")]: {
-      flexDirection: "column",
-      alignItems: "center",
+    "&& > div:nth-child(1)": {
       width: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+    },
+    "&& > div:nth-child(1) > div": {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      height: 208,
+    },
+    "&& > div:nth-child(1) > img": {
+      width: "241px !important",
+      height: "208px !important",
+    },
+    "&& > div:nth-child(1) > div > img": {
+      width: "109px !important",
+      height: "98px !important",
+    },
+    "&& > h2": {
+      color: palette.text.primary,
+      fontSize: "18px",
+      fontStyle: "normal",
+      fontWeight: 800,
+      lineHeight: "24px",
+      // margin: "10px 0px",
+      marginTop: 22,
+      marginLeft: 8,
+    },
+    "&& > h3": {
+      color: palette.text.primary,
+      fontSize: "14px",
+      fontStyle: "normal",
+      fontWeight: 400,
+      lineHeight: "21px",
+      marginLeft: 8,
+      "& > span": {
+        color: "red",
+        fontSize: "14px",
+        fontStyle: "normal",
+        fontWeight: 400,
+        lineHeight: "21px",
+      },
     },
   })
 );
-
-export const CollectionInnerContainer = styled(Box)(
-  ({ theme: { palette, breakpoints }, item }) => ({
-    flex: 1,
-    display: "flex",
-    flexDirection: "row",
-    padding: "0px 18px",
-
-    [breakpoints.down("md")]: {},
-  })
-);
-
-export const ImagesContainer = styled(Box)(
-  ({ theme: { palette, breakpoints }, item }) => ({
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    padding: "25px 0px",
-    width: "100%",
-    height: "80%",
-
-    [breakpoints.down("md")]: {},
-  })
-);
-
-export const TextContainer = styled(Box)(
-  ({ theme: { palette, breakpoints }, item }) => ({
-    [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
-      padding: "0px 30px",
-    },
-  })
-);
-
-export const CollectionTitle = styled(Typography)(
-  ({ theme: { palette, breakpoints }, item }) => ({
-    fontSize: "18px",
-    fontWeight: 800,
-    color: palette.text.primary,
-
-    [breakpoints.down("md")]: {},
-  })
-);
-export const CollectionItemBox = styled(Typography)(
-  ({ theme: { palette, breakpoints }, item }) => ({
-    flexDirection: "row",
-    display: "flex",
-    height: 20,
-    alignItems: "center",
-
-    [breakpoints.down("md")]: {},
-  })
-);
-export const CollectionItemNumber = styled(Typography)(
-  ({ theme: { palette, breakpoints }, item }) => ({
-    fontSize: "14px",
-    fontWeight: 700,
-    color: palette.text.primary,
-
-    [breakpoints.down("md")]: {},
-  })
-);
-
-export const CollectionItem = styled(Typography)(
-  ({ theme: { palette, breakpoints } }) => ({
-    marginLeft: 3,
-    color: palette.text.disabled,
-
-    [breakpoints.down("md")]: {},
-  })
-);
-export const SliderBox = styled(Typography)(
-  ({ theme: { palette, breakpoints } }) => ({
-    height: 46,
-    width: 46,
-    borderRadius: 100,
-    backgroundColor: "transparent",
-    border: `1px solid ${palette.inherit.main}`,
-
-    [breakpoints.down("md")]: {},
-  })
-);
-
-export const ExpandAllButton = styled(Button)(({ theme }) => ({
-  width: "133px",
-  height: "46px",
-  backgroundColor: "#7A52F4",
-  color: "#fff",
-
-  [theme.breakpoints.down("sm")]: {
-    width: "133px",
-    height: "46px",
-  },
-}));

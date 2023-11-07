@@ -7,23 +7,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import {
-  CarouselContainer,
-  CollectionInnerContainer,
-  CollectionItem,
-  CollectionItemBox,
-  CollectionItemNumber,
-  CollectionTitle,
-  ExpandAllButton,
-  ImageSlide,
-  ImagesContainer,
+  CollectionCard,
   MainBox,
-  MainBoxContainer,
-  MainCollectionBox,
-  OverlappingImage,
-  RecommendedCollection,
+  RecommendedCollections,
   Row,
   RowText,
-  SliderBox,
+  SectionHeading,
   SliderMain,
   Table,
   TableBoxMain,
@@ -212,116 +201,50 @@ const Home = () => {
             </Table>
           </Box>
         </TableBoxMain>
-        <RecommendedCollection>Recommended Collections</RecommendedCollection>
-
-        <MainCollectionBox>
-          <SliderBox />
-          {RecommendedCollectionList.map((item, index) => {
-            return (
-              <MainBoxContainer>
-                <CollectionInnerContainer>
-                  <ImagesContainer>
+        <RecommendedCollections>
+          <SectionHeading>Recommended Collections</SectionHeading>
+          <Box>
+            {new Array(3).fill(0).map((val, ind) => (
+              <Box key={val}>
+                <CollectionCard>
+                  <Box>
                     <Image
-                      src={item.mainImage}
-                      alt="Big Image"
-                      width={241}
-                      height={208}
-                      style={{
-                        borderRadius: "10px",
-                      }}
+                      src="/images/Art.png"
+                      width={1000}
+                      height={1000}
+                      alt=""
                     />
-                    <Box flexDirection={"column"} display={"flex"}>
+                    <Box>
                       <Image
-                        src={item.leftTopImage}
-                        alt="Small Image 1"
-                        width={109}
-                        height={105}
-                        style={{
-                          padding: "3px",
-                          borderRadius: "10px",
-                        }}
+                        src="/images/Art.png"
+                        width={1000}
+                        height={1000}
+                        alt=""
                       />
                       <Image
-                        src={item.leftBottomImage}
-                        alt="Small Image 2"
-                        width={109}
-                        height={105}
-                        style={{
-                          padding: "3px",
-                          borderRadius: "10px",
-                        }}
+                        src="/images/Art.png"
+                        width={1000}
+                        height={1000}
+                        alt=""
                       />
                     </Box>
-                  </ImagesContainer>
-                </CollectionInnerContainer>
-                <TextContainer>
-                  <CollectionTitle>{item.title}</CollectionTitle>
-                  <CollectionItemBox>
-                    <CollectionItemNumber>{item.items}</CollectionItemNumber>
-                    <CollectionItem>items</CollectionItem>
-                  </CollectionItemBox>
-                </TextContainer>
-              </MainBoxContainer>
-            );
-          })}
-          <SliderBox />
-        </MainCollectionBox>
-
-        <Box
-          mt={"47px"}
-          flexDirection={"row"}
-          display={"flex"}
-          justifyContent={"space-between"}
-          alignItems={"center"}
-          flexWrap={"wrap"}
-          gap={"20px"}
-        >
-          <Typography
-            fontSize={28}
-            fontWeight={"800"}
-            color={themeMode == "light" ? "#000" : "#fff"}
-          >
-            Active Mint
-          </Typography>
-          <Box
-            flexDirection={"row"}
-            justifyContent={"space-between"}
-            height={50}
-            alignItems={"center"}
-            display={"flex"}
-          >
-            <ExpandAllButton variant="contained" onClick={() => {}}>
-              Expand All
-            </ExpandAllButton>
-            <Box
-              height={40}
-              width={40}
-              border={`1px solid ${themeMode == "light" ? "#000" : "#fff"}`}
-              borderRadius={100}
-              ml={1}
-            />
-            <Box
-              height={40}
-              width={40}
-              border={`1px solid ${themeMode == "light" ? "#000" : "#fff"}`}
-              borderRadius={100}
-              ml={1}
-            />
+                  </Box>
+                  <Typography variant="h2">Celestial Spirits</Typography>
+                  <Typography variant="h3">
+                    2222 <span>items</span>
+                  </Typography>
+                  {/* <Box>
+            <Image src="/images/Art.png" height={208} width={241} alt="" />
+            <Box>
+              <Image src="/images/Art.png" height={98} width={109} alt="" />
+              <Image src="/images/Art.png" height={98} width={109} alt="" />
+            </Box>
+          </Box> */}
+                </CollectionCard>
+              </Box>
+            ))}
           </Box>
-        </Box>
-        <Box
-          my={"37px"}
-          justifyContent={"space-between"}
-          flexWrap={"wrap"}
-          display={"flex"}
-          flexDirection={"row"}
-          gap={"20px"}
-        >
-          {ActiveMintList.map((item, index) => {
-            return <ActiveMintCard item={item} />;
-          })}
-        </Box>
-        <BrowseAllNFTS />
+        </RecommendedCollections>
       </MainBox>
     </>
   );
