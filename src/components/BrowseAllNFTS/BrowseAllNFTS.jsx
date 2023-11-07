@@ -60,7 +60,7 @@ export const BrowseAllNFTS = () => {
       <Divider />
 
       <NFTContainer>
-        {[0, 1, 2, 3].map((item, index) => {
+        {new Array(4).fill(0).map((item, index) => {
           return (
             <NFTCard key={index}>
               <Image

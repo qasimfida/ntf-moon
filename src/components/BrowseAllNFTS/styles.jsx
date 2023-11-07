@@ -10,6 +10,7 @@ export const MainHeading = styled(Typography)(({ theme }) => ({
   fontSize: "28px",
   fontWeight: "800",
   textAlign: "center",
+  color: theme.palette.inherit.main,
 
   [theme.breakpoints.down("sm")]: {},
 }));
@@ -44,6 +45,7 @@ export const NftTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 800,
   textAlign: "center",
   marginTop: 23,
+  color: theme.palette.inherit.main,
 
   [theme.breakpoints.down("sm")]: {},
 }));
@@ -71,12 +73,15 @@ export const NftBottom = styled(Typography)(({ theme }) => ({
 export const NftBottomText = styled(Typography)(({ theme }) => ({
   fontSize: 14,
   fontWeight: 400,
+  color: theme.palette.inherit.main,
+
   [theme.breakpoints.down("sm")]: {},
 }));
 
 export const NftBottomHilight = styled(Typography)(({ theme }) => ({
   fontSize: 14,
   fontWeight: "bold",
+  color: theme.palette.inherit.main,
 
   [theme.breakpoints.down("sm")]: {},
 }));
