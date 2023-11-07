@@ -95,7 +95,7 @@ export const Navbar = () => {
             onClick={handleOpenNavMenu}
             color="inherit"
           >
-            <MenuIcon color="inherit" />
+            <MenuIcon color="primary" />
           </IconButton>
           <StyledMenu
             id="menu-appbar"

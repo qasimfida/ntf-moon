@@ -142,7 +142,7 @@ export const Row = styled(Box)(({ theme: { palette, breakpoints } }) => ({
   minHeight: "68px",
   borderRadius: "8px",
   padding: "10px 16px",
-  border: `1px solid ${palette.borderColor.primary}`,
+  border: `1px solid ${palette.grey[800]}`,
   [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
     // flexDirection: "row",
   },

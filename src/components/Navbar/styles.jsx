@@ -141,16 +141,14 @@ export const StyledIconBox = styled(Box)(
   })
 );
 
-export const StyledMenu = styled(Menu)(
-  ({ theme: { palette, breakpoints } }) => ({
-    display: { xs: "block", md: "none" },
-  })
-);
+export const StyledMenu = styled(Menu)(({ theme }) => ({
+  display: { xs: "block", md: "none" },
+}));
 
 export const StyledMenuItemTypography = styled(Typography)(
   ({ theme: { palette, breakpoints } }) => ({
     textAlign: "center",
-    color: "#5D5D5B",
+    color: palette.common.black,
   })
 );
 

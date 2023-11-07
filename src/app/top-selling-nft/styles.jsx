@@ -37,7 +37,7 @@ export const FilterButton = styled(Button)(
     height: "36px",
     lineHeight: "18px",
     boxShadow: "none",
-    border: `1px solid ${palette.borderColor.primary}`,
+    border: `1px solid ${palette.grey[800]}`,
     [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
       // fontSize: "1.25rem",
     },
@@ -61,7 +61,7 @@ export const FilterDaysButton = styled(Button)(
     height: "36px",
     lineHeight: "18px",
     boxShadow: "none",
-    border: `1px solid ${palette.borderColor.primary}`,
+    border: `1px solid ${palette.grey[800]}`,
     [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
       // fontSize: "1.25rem",
     },
@@ -212,39 +212,35 @@ export const TableHeadText = styled(Typography)(
     fontStyle: "normal",
     fontWeight: 700,
     lineHeight: "18px",
-    [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {
-      // fontSize: "1.25rem",
-    },
+    [`@media screen and (min-width: ${breakpoints.values.md}px)`]: {},
   })
 );
 
-export const LoadMoreButton = styled(Button)(
-  ({ theme: { palette, breakpoints } }) => ({
-    backgroundColor:
-      palette.mode == "light" ? palette.primary.light : "#EBF0F01A",
-    color: palette.mode == "light" ? palette.primary.dark : "white",
-    padding: "9px 16px",
-    borderRadius: "24px",
-    textTransform: "none",
-    fontSize: "12px",
-    fontWeight: 700,
-    fontStyle: "normal",
-    height: "46px",
-    width: "246px",
-    lineHeight: "18px",
+export const LoadMoreButton = styled(Button)(({ theme: { palette } }) => ({
+  backgroundColor:
+    palette.mode == "light" ? palette.primary.light : "#EBF0F01A",
+  color: palette.mode == "light" ? palette.primary.dark : "white",
+  padding: "9px 16px",
+  borderRadius: "24px",
+  textTransform: "none",
+  fontSize: "12px",
+  fontWeight: 700,
+  fontStyle: "normal",
+  height: "46px",
+  width: "246px",
+  lineHeight: "18px",
+  boxShadow: "none",
+  margin: "40px auto",
+  display: "block",
+  textAlign: "center",
+  border: `1px solid ${palette.grey[800]}`,
+  "&:hover": {
+    color: palette.primary.dark,
+    backgroundColor: palette.primary.light,
     boxShadow: "none",
-    margin: "40px auto",
-    display: "block",
-    textAlign: "center",
-    border: `1px solid ${palette.borderColor.primary}`,
-    "&:hover": {
-      color: palette.primary.dark,
-      backgroundColor: palette.primary.light,
-      boxShadow: "none",
-    },
-    "&.active": {
-      color: "white",
-      backgroundColor: palette.primary.main,
-    },
-  })
-);
+  },
+  "&.active": {
+    color: "white",
+    backgroundColor: palette.primary.main,
+  },
+}));

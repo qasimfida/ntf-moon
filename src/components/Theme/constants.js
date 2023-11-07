@@ -7,9 +7,6 @@ const inter = Inter({
 });
 
 const lightPalette = {
-  inherit: {
-    main: "#000",
-  },
   primary: {
     main: "#7A52F4",
     dark: "#6242c3",
@@ -18,6 +15,19 @@ const lightPalette = {
   secondary: {
     main: "#f4c952",
     light: "#fff5d9",
+  },
+  error: {
+    main: "#F20089",
+    light: "#fdd9ed",
+  },
+  success: {
+    main: "#03db80",
+    light: "#03db80",
+  },
+  dark: {
+    400: "#393D3B",
+    600: "#262626",
+    600: "#000000",
   },
   grey: {
     light: "#CCCCCC",
@@ -25,47 +35,19 @@ const lightPalette = {
     dark: "#4D4D4D",
     400: "#f5f7f7",
     600: "#b0b2b1",
-    800: "#5D5D5B",
-    900: "#979797",
-    1000: "#EBF0F080",
-  },
-  text: {
-    primary: "#000000",
-    secondary: "#000000",
-    red: "#f71111",
-    green: "#03DB80",
-  },
-  background: {
-    default: "#f2f2f2",
-    paper: "#ffffff",
-  },
-  common: {
-    white: "#000",
-    grey: "#F5F8F8",
-  },
-  boxShadow: {
-    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
-  },
-  borderColor: {
-    main: "#5D5D5B",
-  },
-  grey: {
-    400: "#f5f7f7",
-    600: "#b0b2b1",
     700: "#CFDBD5",
     800: "#5D5D5B",
     900: "#8e9392",
     1000: "#EBF0F080",
   },
-  dark: {
-    400: "#393D3B",
+  common: {
+    black: "#000",
+    white: "#fff",
+    grey: "#F5F8F8",
   },
 };
 
 const darkPalette = {
-  inherit: {
-    main: "#fff",
-  },
   primary: {
     main: "#7A52F4",
     dark: "#6242c3",
@@ -75,29 +57,32 @@ const darkPalette = {
     main: "#f4c952",
     light: "#fff5d9",
   },
+  error: {
+    main: "#F20089",
+    light: "#fdd9ed",
+  },
+  success: {
+    main: "#03db80",
+    light: "#03db80",
+  },
   common: {
+    black: "#fff",
     white: "#fff",
     grey: "#181818",
   },
-  boxShadow: {
-    appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
-  },
-  borderColor: {
-    main: "#5D5D5B",
-  },
   grey: {
-    400: "#171818",
+    light: "#CCCCCC",
+    main: "#7F7F7F",
+    dark: "#4D4D4D",
+    400: "#f5f7f7",
     600: "#b0b2b1",
     700: "#CFDBD5",
-    800: "#868887",
+    800: "#FFFFFF80",
     900: "#8e9392",
-    1000: "#EBF0F01A",
+    1000: "#EBF0F080",
   },
   dark: {
     400: "#393D3B",
-  },
-  borderColor: {
-    400: "#CFDBD5",
   },
 };
 
@@ -120,12 +105,6 @@ export const theme = (mode) =>
       },
       tokenHoverColor: {
         color: "#D9D9D9",
-      },
-      boxShadow: {
-        appBar: "0px 3px 4px 0px rgba(255, 255, 255, 0.25)",
-      },
-      borderColor: {
-        main: "#5D5D5B",
       },
     },
     shadows: [
@@ -215,41 +194,11 @@ export const theme = (mode) =>
           styleOverrides: {
             root: {
               borderRadius: "1.8rem",
-              fontWeight: "700",
+              fontWeight: "900",
               fontSize: ".875rem",
               padding: "12px 26px",
             },
           },
-          variants: [
-            {
-              props: { variant: "outlined", color: "primary" },
-              style: {
-                border: `1px solid ${
-                  mode === "light"
-                    ? lightPalette.primary.main
-                    : darkPalette.common.white
-                }`,
-                color:
-                  mode === "light"
-                    ? lightPalette.primary.main
-                    : darkPalette.common.white,
-              },
-            },
-            {
-              props: { variant: "outlined", color: "grey" },
-              style: {
-                border: `1px solid ${
-                  mode === "light"
-                    ? lightPalette.grey.main
-                    : darkPalette.grey.white
-                }`,
-                color:
-                  mode === "light"
-                    ? lightPalette.grey.main
-                    : darkPalette.common.white,
-              },
-            },
-          ],
         },
         MuiBox: {
           styleOverrides: {
