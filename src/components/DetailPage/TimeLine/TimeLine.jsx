@@ -7,6 +7,7 @@ import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { useSelector } from "react-redux";
 import { NumberConatiner, TimeLineItemNoText } from "./style";
+import { TimelineConnector, TimelineDot } from "@mui/lab";
 
 export default function TimeLine() {
   const themeMode = useSelector((state) => state.theme.themeMode);
@@ -14,7 +15,13 @@ export default function TimeLine() {
     return (
       <>
         <TimelineItem key={index}>
-          <TimelineSeparator style={{ width: 100, backgroundColor: "#E4DCFD" }}>
+          <TimelineSeparator
+            style={{
+              width: 100,
+              // marginTop: 20,
+              backgroundColor: "#E4DCFD",
+            }}
+          >
             <NumberConatiner>
               <TimeLineItemNoText>{item.title}</TimeLineItemNoText>
             </NumberConatiner>

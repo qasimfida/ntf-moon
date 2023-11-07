@@ -239,3 +239,37 @@ export const timelineList = [
       "Launch the Celestial Spirit Collection on the XRP Ledger (XRPL), generating anticipation through social media engagement and ensuring seamless integration with XRPL platforms and wallets.",
   },
 ];
+
+export const RecommendedCollectionList = [
+  {
+    mainImage: "/images/service-image-6.png",
+    leftTopImage: "/images/service-image-6.png",
+    leftBottomImage: "/images/service-image-6.png",
+    title: "Celestial Spirits",
+    items: 9800,
+  },
+  {
+    mainImage: "/images/service-image-6.png",
+    leftTopImage: "/images/service-image-6.png",
+    leftBottomImage: "/images/service-image-6.png",
+    title: "Celestial Spirits",
+    items: 9800,
+  },
+  {
+    mainImage: "/images/service-image-6.png",
+    leftTopImage: "/images/service-image-6.png",
+    leftBottomImage: "/images/service-image-6.png",
+    title: "Celestial Spirits",
+    items: 9800,
+  },
+];
+
+export const tabs = [
+  "All",
+  "Trending",
+  "Art",
+  "Utility",
+  "Collectibles",
+  "Metaverse",
+  "Domain Names",
+];
