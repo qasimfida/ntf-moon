@@ -1,10 +1,4 @@
-import {
-  Box,
-  Container,
-  Paper,
-  Typography,
-  LinearProgress,
-} from "@mui/material";
+import { Box, Container, Typography, LinearProgress } from "@mui/material";
 import { CustomProgressBar, DateButton, MintBox, WalletButton } from "./styles";
 import { Image } from "@mui/icons-material";
 import useGetActiveTheme from "@/hooks/useGetActiveTheme";

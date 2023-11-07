@@ -111,6 +111,12 @@ export const theme = (mode) =>
       "none",
       "0px 3px 4px 0px rgba(153, 155, 168, 0.25), 0px 3px 4px 0px rgba(153, 155, 168, 0.25), 0px 3px 4px 0px rgba(153, 155, 168, 0.25)", // 1
       "0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)",
+      "0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)",
+      "0px 4px 4px rgba(0,0,0,0.25)",
+      "0px 5px 5px rgba(0,0,0,0.25)",
+      "0px 6px 6px rgba(0,0,0,0.25)",
+      "0px 7px 7px rgba(0,0,0,0.25)",
+      "0px 8px 8px rgba(0,0,0,0.25)",
     ],
     typography: {
       fontFamily: inter.style.fontFamily,

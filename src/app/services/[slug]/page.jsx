@@ -11,6 +11,7 @@ import {
   HeadingWrapper,
   ImageBackground,
   ImageWrapper,
+  NotFound,
   Section,
   SimpleCardGrid,
   StyledGrid,
@@ -20,9 +21,10 @@ import {
 } from "./styles";
 import { Heading } from "@/components/Heading";
 import { SimpleCard } from "@/components/SimpleCard";
-import { Box, Button, Container, Grid } from "@mui/material";
+import { Button, Container, Grid } from "@mui/material";
 import Image from "next/image";
 import { servicesData } from "@/constants/serviceData";
+import SadFaceIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 
 import {
   AnimationImages,
@@ -43,7 +45,11 @@ const ServiceDetail = ({ params }) => {
   }, [params]);
 
   if (!selectedService) {
-    return <Box>Service not found</Box>;
+    return (
+      <NotFound>
+        Oh no, something went wrong <SadFaceIcon />
+      </NotFound>
+    );
   }
 
   const {
@@ -86,7 +92,7 @@ const ServiceDetail = ({ params }) => {
               <Grid item md={5.8} key={index}>
                 <SimpleCard
                   textAlign="center"
-                  shadow
+                  shadow="true"
                   title={card.title}
                   description={card.description}
                 />
@@ -103,7 +109,7 @@ const ServiceDetail = ({ params }) => {
               {AnimationImages.map((animation, index) => (
                 <Grid item md={2.5} zIndex={99} key={index}>
                   <AnimationImage>
-                    <Image src={animation} />
+                    <Image src={animation} alt="Banner" />
                   </AnimationImage>
                 </Grid>
               ))}
@@ -154,7 +160,7 @@ const ServiceDetail = ({ params }) => {
               <SimpleCardGrid item md={3.8} key={index}>
                 <SimpleCard
                   textAlign="center"
-                  shadow
+                  shadow="true"
                   title={card.title}
                   description={card.description}
                 />

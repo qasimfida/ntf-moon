@@ -1,5 +1,15 @@
 import { Box, Grid, Typography, styled } from "@mui/material";
 
+export const NotFound = styled(Box)(({ theme: { palette, spacing } }) => ({
+  backgroundColor: palette.common.white,
+  height: "30vh",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontWeight: 600,
+  gap: spacing(1),
+  fontSize: "1.7rem",
+}));
 export const Wrapper = styled(Box)(({ theme: { palette } }) => ({
   backgroundColor: palette.common.white,
 }));

@@ -193,6 +193,7 @@ export const TokenMainBox = styled(Button)(({ theme: { palette } }) => ({
   "&:hover": {
     border: `1px solid ${palette.grey[600]}`,
     background: palette.grey[400],
+    color: palette.grey.main,
   },
 }));
 
